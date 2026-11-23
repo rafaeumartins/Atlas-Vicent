@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Atlas Vicent | Biblioteca de Ingredientes — Edição 025</title><meta content="Biblioteca de ingredientes mágicos da Família Vicent, organizada por ingrediente com reconhecimento, descrição, poções e mapas originais." name="description"/>
+<style>
+:root{--bg:#0c1b21;--bg2:#152a2b;--bg3:#203937;--gold:#cda967;--gold-light:#ead3a1;--cream:#f0e5d0;--parch:#eaddbf;--ink:#2d2a20;--muted:#bfc8bb;--rule:rgba(219,178,102,.38);--red:#7f2931}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 52% 0%,#1a2b2d 0%,#0b171c 58%);color:#f1e8d5;font-family:Georgia,'Times New Roman',serif}body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:repeating-linear-gradient(100deg,transparent 0 18px,rgba(206,175,120,.018) 19px 20px);opacity:.27}button,input{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,.zoomable:focus-visible{outline:2px solid #edd19b;outline-offset:4px}a{color:inherit;text-decoration:none}
+.page{width:min(1350px,100%);margin:0 auto;padding:25px 34px 80px}.toolbar{display:flex;gap:20px;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:30;background:rgba(12,26,31,.96);backdrop-filter:blur(15px);border-bottom:1px solid var(--rule);padding:11px 12px;box-shadow:0 6px 18px #07101472}.brand{display:flex;align-items:center;gap:14px}.brand-crest{width:48px;height:60px;object-fit:contain}.brand b{display:block;font-size:14px;letter-spacing:.13em;font-weight:400;color:#e8cb91}.brand small{display:block;font:9px/1.6 system-ui,sans-serif;letter-spacing:.22em;color:#b8b39f}.top-actions{display:flex;gap:8px;align-items:center}.top-actions button,.top-actions a{background:transparent;border:1px solid var(--rule);color:#f0ddba;padding:12px 15px;font:600 11px system-ui,sans-serif;letter-spacing:.045em}.top-actions button:hover{background:#283f39}
+.mast{margin-top:24px;border:1px solid #80673b;position:relative;padding:39px 26px 35px;text-align:center;background:radial-gradient(ellipse at 50% 20%,#233939,#0e1d22 75%);box-shadow:0 13px 25px #050c1066;overflow:hidden}.mast:before,.mast:after{content:"✦";font-size:26px;color:#b3945b;position:absolute;top:12px}.mast:before{left:18px}.mast:after{right:18px}.mast .eyebrow{font:600 11px system-ui,sans-serif;letter-spacing:.44em;color:var(--gold)}.mast h1{font-size:clamp(35px,5.3vw,67px);font-weight:400;letter-spacing:.045em;color:#f3e8d0;margin:13px 0 6px}.mast h1 span{color:#d4b67b}.mast p{font-size:17px;color:#c7ccb9;max-width:740px;line-height:1.7;margin:10px auto}.motto{color:#d7b985!important;font-style:italic;font-size:15px!important;margin-top:16px!important}.rule{display:flex;align-items:center;gap:15px;color:#b99354;font-size:22px;justify-content:center;margin:12px auto;width:min(350px,95%)}.rule:before,.rule:after{content:'';height:1px;flex:1;background:#8e7449}
+.catalog-info{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--rule);margin:22px 0;background:rgba(21,44,43,.7)}.catalog-info div{padding:19px;text-align:center;border-right:1px solid var(--rule)}.catalog-info div:last-child{border:0}.catalog-info b{display:block;color:#e7cc93;font-weight:400;font-size:36px}.catalog-info span{font:10px system-ui,sans-serif;letter-spacing:.13em;color:#c4c3b7;text-transform:uppercase}
+.reader-guide{padding:16px 21px;border:1px solid var(--rule);background:#1d3031;color:#d3ceb8;font-size:13px;line-height:1.7;margin:14px 0 23px}.reader-guide strong{color:#f4ddb0}.search-row{display:flex;gap:12px;align-items:center;margin-bottom:22px}.search-row input{width:100%;min-width:0;background:#192e30;border:1px solid #89744c;padding:13px 17px;color:#f2e9d6;font:13px system-ui,sans-serif}.search-row input::placeholder{color:#abb8b1}.search-row button{padding:13px 20px;border:1px solid #816d45;background:#2c3a35;color:#e8cf99;font:600 12px system-ui,sans-serif}.no-search{display:none;border:1px dashed #b89a60;text-align:center;padding:25px;color:#e1d1af}.no-search.show{display:block}
+.catalog-layout{display:grid;grid-template-columns:255px minmax(0,1fr);gap:28px;align-items:start}.toc{position:sticky;top:95px;max-height:calc(100vh - 120px);overflow:auto;border:1px solid var(--rule);background:#14262a;padding:20px 13px}.toc h2{font-size:18px;letter-spacing:.07em;font-weight:400;color:#e7c48a;padding:0 11px;margin:2px 0 15px}.nav-link{display:flex;gap:11px;align-items:center;flex-wrap:wrap;font:600 12px/1.5 system-ui,sans-serif;color:#e6d7b8;border-bottom:1px solid #a78c5330;padding:12px 9px}.nav-link span{color:#d6af67;width:19px;font-family:Georgia,serif;font-size:17px;font-weight:400}.nav-link small{margin-left:auto;color:#98a9a2;font-size:10px;font-weight:400}.nav-link:hover{background:#273c39}.toc-footer{padding:18px 10px 2px;color:#aeb8ad;font:11px/1.6 system-ui,sans-serif}
+.book-section{border:1px solid var(--rule);margin-bottom:28px;background:linear-gradient(155deg,#1b302e,#102126 45%,#0c191e);box-shadow:0 12px 30px #05101566}.book-section[hidden]{display:none!important}.chapter-cover{padding:29px 33px 32px;position:relative}.chapter-cover:before{content:'';position:absolute;pointer-events:none;inset:9px;border:1px solid #d2b27f24}.chapter-head{display:flex;justify-content:space-between;gap:15px;font:700 10px system-ui,sans-serif;letter-spacing:.21em;color:var(--gold)}.chapter-type{color:#aeb4a4}.chapter-rule{display:flex;align-items:center;gap:15px;justify-content:center;color:#c7a66c;font-size:18px;margin:9px 0}.chapter-rule:before,.chapter-rule:after{content:'';height:1px;background:#9b7b4d;flex:1}.chapter-intro{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:0 0 22px}.chapter-title h2{margin:7px 0;font-size:clamp(32px,3.8vw,52px);font-weight:400;color:#f5dfb5;line-height:1.12}.eyebrow{font:700 10px system-ui,sans-serif;letter-spacing:.20em;text-transform:uppercase;color:#caa86a}.chapter-title p{color:#e1dccb;font-size:15px;font-style:italic;margin:9px 0}.chapter-stats{display:flex;gap:10px;flex-wrap:wrap;margin-top:17px}.chapter-stats span{color:#e3cfaa;background:#273d39;border:1px solid #967d4e;padding:7px 9px;font:11px system-ui,sans-serif}.small-crest{width:116px;height:130px;object-fit:contain;filter:drop-shadow(0 5px 9px #0008)}.evidence-head,.thin-heading,.mini-media-head{font:700 10px system-ui,sans-serif;letter-spacing:.17em;color:#d5b57b}.evidence-head{margin:21px 0 12px}.evidence-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:14px}.evidence-card{border:1px solid #aa8a55;background:#dfd1b7;min-width:0;padding:14px;color:#403422;box-shadow:0 3px 11px #050c1040}.evidence-card h3{display:flex;align-items:center;gap:9px;margin:0 0 11px;font-weight:400;font-size:18px}.evidence-card h3 span{color:#8a6a38;font-size:13px;border:1px solid #aa8a55;width:28px;height:28px;display:flex;align-items:center;justify-content:center}.evidence-media{height:290px;background:#a69575;overflow:hidden}.hero-photo{display:block;width:100%;height:100%;object-fit:contain;background:#b4ae8c;cursor:zoom-in}.inventory-photo{display:block;width:100%;height:100%;object-fit:contain;background:#10232c;cursor:zoom-in}.pending-image{height:100%;width:100%;min-height:126px;border:2px dashed rgba(124,102,59,.56);background:repeating-linear-gradient(-45deg,#e9dec6,#e9dec6 10px,#e4d6bc 10px,#e4d6bc 20px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:8px;padding:13px;color:#7d6440}.pending-symbol{font-size:30px}.pending-image span{font:12px system-ui,sans-serif}.pending-image strong{font:700 12px system-ui,sans-serif;letter-spacing:.08em}.pending-image small{max-width:300px;font:11px/1.5 system-ui,sans-serif;color:#766b57}
+.description-recipe{display:grid;grid-template-columns:1fr 1fr;gap:17px;margin-top:17px}.description-block,.recipes-block{padding:19px;border:1px solid rgba(210,176,116,.55);background:#1c3332}.description-block p{color:#eadbbd;font-size:17px;line-height:1.7;margin:10px 0 18px}.description-block .source-note{font:11px/1.7 system-ui,sans-serif;color:#b2b9ac;border-top:1px solid #8f744865;padding-top:12px}.missing-desc{color:#d2c399;font-style:italic}.recipes-block ul{list-style:none;margin:13px 0 10px;padding:0}.recipes-block li{display:flex;align-items:center;gap:11px;border-bottom:1px solid rgba(196,168,110,.25);padding:10px 0}.potion-dot{color:#deb779;font-size:21px}.recipes-block li b{display:block;color:#e8d6b2;font-weight:400;font-size:16px}.recipes-block li span{display:block;color:#aebbb0;font:12px/1.5 system-ui,sans-serif;margin-top:3px}.recipes-block small{font:10px/1.6 system-ui,sans-serif;color:#a7b2a6}.to-maps{font:700 10px system-ui,sans-serif;letter-spacing:.15em;text-align:center;color:#bdad8c;padding:22px 0 0}.to-maps span{color:#cead77;margin:0 9px}.to-maps b{color:#d4b27b;font-size:16px}
+.chapter-locations{border-top:1px solid var(--rule);padding:24px 27px 28px;background:#172c2d}.places-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}.places-head h3{font-size:30px;font-weight:400;color:#f1dcb5;margin:6px 0 0}.places-head p{font-size:13px;color:#c6cfbf;margin:5px 0}.map-count{display:flex;flex-direction:column;text-align:center;color:#e4c68f;font-size:40px}.map-count span{font:9px system-ui,sans-serif;letter-spacing:.1em;color:#b5c1b6}.location-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.location-card{background:var(--parch);border:1px solid #8e7149;min-width:0;color:#332b21;box-shadow:0 6px 14px #0004;overflow:hidden}.location-top{display:flex;align-items:center;justify-content:space-between;gap:7px;padding:14px 15px 11px}.index-ref{color:#6d593d;font:700 11px system-ui,sans-serif;letter-spacing:.1em}.qty-badge{background:#274037;color:#e8d8b4;padding:7px 10px;font:11px system-ui,sans-serif}.map-container{height:190px;position:relative;background:#a89a7e;margin:0 11px}.location-image{width:100%;height:100%;object-fit:contain;display:block;cursor:zoom-in}.map-container>.pending-image{min-height:0}.zoom-cue{position:absolute;bottom:7px;right:8px;padding:5px 7px;background:rgba(14,26,24,.85);color:#e8cda0;font:10px system-ui,sans-serif;pointer-events:none}.location-details{padding:16px 17px 13px}.location-details h4{font-size:23px;font-weight:400;margin:0}.location-sub{font-style:italic;color:#765e39;font-size:14px;margin-top:4px}.location-details p{font-size:13px;line-height:1.6;margin:13px 0 15px;min-height:43px}.mini-media-head{color:#78623c;border-top:1px solid #a68c665e;padding-top:10px;font-size:9px}.mini-media-status{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}.mini-media-status div{flex:1;min-width:130px;text-align:center;padding:9px 6px;border:1px dashed #aa986f;font:11px system-ui,sans-serif}.mini-media-status .is-missing{color:#815e32;background:#e8dabc}.mini-media-status .is-complete{color:#315c3f;background:#d5e0cb;border-style:solid;border-color:#9da995}.record-actions{display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid #b49b735c;padding-top:10px}.record-actions span{font:10px/1.4 system-ui,sans-serif;color:#816b4c}.collect-btn{border:1px solid #6c8d73;background:transparent;color:#34543e;padding:8px 9px;font:700 11px system-ui,sans-serif;white-space:nowrap}.collect-btn.found{background:#2d583e;color:#f2eada}.group-ending{text-align:center;font-size:14px;font-style:italic;color:#bda678;padding:27px 0 0}.end-motto{text-align:center;color:#cbb486;border-top:1px solid var(--rule);font-style:italic;padding:30px;margin-top:25px}
+.lightbox{position:fixed;inset:0;background:#050b0cef;z-index:90;display:flex;flex-direction:column;padding:18px}.lightbox[hidden]{display:none}.lightbox-top{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:5px 0 17px;color:#e4d4b2}.lightbox-top button{background:#25362f;border:1px solid #bd9861;color:#f2e8d0;padding:9px 14px;font-size:13px}.lightbox img{display:block;min-height:0;min-width:0;max-width:100%;max-height:calc(100vh - 105px);object-fit:contain;margin:auto;box-shadow:0 0 0 1px #d0af7a}.lightbox figcaption{color:#d2bf9a;text-align:center;font:12px system-ui,sans-serif;padding-top:10px}
+@media(max-width:1090px){.page{padding:15px}.catalog-layout{grid-template-columns:205px minmax(0,1fr);gap:14px}.chapter-cover{padding:25px 18px}.chapter-locations{padding:22px 17px}.location-grid{grid-template-columns:1fr}.small-crest{width:90px;height:95px}}@media(max-width:730px){.toolbar{top:0}.brand-crest{width:37px;height:46px}.brand b{font-size:11px}.brand small{font-size:8px}.top-actions button,.top-actions a{padding:8px;font-size:10px}.mast{padding:31px 16px}.catalog-layout{display:block}.toc{position:static;max-height:none;margin-bottom:15px}.toc h2{margin:0 0 8px}.toc nav{display:flex;overflow:auto;gap:8px}.toc .nav-link{flex-shrink:0;padding:8px;border:1px solid #876f46}.toc .nav-link small{display:none}.toc-footer{display:none}.chapter-intro{align-items:start}.small-crest{width:65px;height:80px}.evidence-media{height:230px}}@media(max-width:530px){.page{padding:9px}.toolbar{padding:6px 4px}.brand{gap:5px}.brand b{font-size:10px}.top-actions a{display:none}.mast h1{font-size:35px}.catalog-info div{padding:12px 5px}.catalog-info b{font-size:25px}.catalog-info span{font-size:8px}.chapter-title h2{font-size:29px}.chapter-cover{padding:19px 12px}.evidence-grid{grid-template-columns:1fr}.evidence-media{height:250px}.description-recipe{grid-template-columns:1fr}.chapter-stats{margin-top:10px}.chapter-stats span{font-size:10px}.chapter-locations{padding:18px 11px}.places-head h3{font-size:26px}.location-grid{gap:13px}.map-container{height:195px}}
+@media print{
+  @page{size:A4 portrait;margin:0}
+  html,body{margin:0!important;padding:0!important;background:#0c1b21!important;color:#f2e3c5;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  body:before{display:none!important}
+  .page{width:100%;max-width:none;padding:0;margin:0}
+  .toolbar,.mast,.catalog-info,.reader-guide,.search-row,.toc,.end-motto,.lightbox,.no-search{display:none!important}
+  .catalog-layout{display:block}.catalog-content{width:100%}
+  .book-section{display:block!important;margin:0!important;border:0!important;box-shadow:none!important;background:#102026!important;break-before:page;page-break-before:always}
+  .chapter-cover{padding:12mm 12mm 10mm;min-height:297mm;max-height:297mm;break-after:page;page-break-after:always;overflow:hidden;background:linear-gradient(140deg,#213936,#0e1d22 68%)!important}
+  .chapter-cover:before{inset:6mm}
+  .chapter-title h2{font-size:29pt}.chapter-title p{font-size:12pt}.chapter-insignia .small-crest{width:32mm;height:40mm}
+  .evidence-grid{grid-template-columns:1.14fr .86fr;gap:4mm}.evidence-card{padding:3mm;box-shadow:none}.evidence-card h3{font-size:12pt;margin:0 0 2mm}.evidence-media{height:84mm}
+  .description-recipe{gap:4mm;margin-top:5mm}.description-block,.recipes-block{padding:4mm}.description-block p{font-size:12pt}.recipes-block li{padding:2mm 0}.recipes-block li b{font-size:11pt}.thin-heading{font-size:8pt}.source-note{font-size:8pt!important}.chapter-cover .to-maps{padding-top:6mm}
+  .chapter-locations{padding:11mm 10mm 16mm;background:#152b2d!important;break-before:page;page-break-before:always;min-height:297mm}
+  .places-head{margin-bottom:5mm}.places-head h3{font-size:22pt}.places-head p{font-size:9pt}
+  .location-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:4mm;align-items:start}
+  .location-card{break-inside:avoid;page-break-inside:avoid;box-shadow:none;border-width:.5pt;margin:0;overflow:hidden}
+  .location-top{padding:2.2mm}.index-ref{font-size:8pt}.qty-badge{padding:1.5mm 2mm;font-size:7pt}
+  .map-container{height:51mm;margin:0 2mm}.zoom-cue{display:none}
+  .location-details{padding:2.5mm}.location-details h4{font-size:13pt}.location-sub{font-size:9pt;margin-top:1mm}.location-details p{font-size:8.5pt;line-height:1.3;min-height:0;margin:2mm 0 2mm}.mini-media-head{font-size:7pt;padding-top:2mm}.mini-media-status{margin:2mm 0}.mini-media-status div{font-size:7pt;min-width:0;padding:1.5mm}.record-actions{padding:1.5mm 0 0}.record-actions span{font-size:7pt}.collect-btn{display:none!important}.group-ending{padding-top:4mm}
+  .pending-image{min-height:0}.pending-image .pending-symbol{font-size:18pt}.pending-image strong{font-size:8pt}.pending-image span,.pending-image small{font-size:7pt}
+  .book-section[hidden]{display:block!important} .book-section[style*='display: none']{display:block!important}
+}
+
+/* VERSÃO DE IMPRESSÃO: capa, cartões uniformes e mapas integralmente visíveis */
+@media screen { .print-cover { display:none!important; } }
+@media print {
+  @page { size: A4 portrait; margin:0; }
+  html,body { background:#102123!important; margin:0!important; padding:0!important;
+    -webkit-print-color-adjust:exact!important; print-color-adjust:exact!important; }
+  .print-cover { display:flex!important; box-sizing:border-box; position:relative;
+    width:210mm; height:297mm; min-height:297mm; max-height:297mm; overflow:hidden;
+    flex-direction:column; align-items:center; text-align:center;
+    padding:13mm 17mm 12mm; color:#f1e5cb;
+    background:radial-gradient(ellipse 165mm 140mm at 50% 37%,#26423f 0%,#162b2e 55%,#0c1b24 100%)!important;
+    break-after:page!important; page-break-after:always!important;
+  }
+  .print-cover:before { content:''; position:absolute; inset:6mm; border:1.1pt solid #b98d4b;pointer-events:none;}
+  .print-cover:after {content:'';position:absolute;inset:8mm;border:.35pt solid #b98d4b75;pointer-events:none;}
+  .cover-ornament { position:absolute;color:#cca260;font-size:18pt; }
+  .top-left {top:8mm;left:9mm} .top-right {top:8mm;right:9mm}
+  .bottom-left {bottom:8mm;left:9mm} .bottom-right {bottom:8mm;right:9mm}
+  .print-cover-top { font:700 10pt/1.4 Georgia,serif; letter-spacing:.30em; color:#deb97d; margin-top:17mm; }
+  .print-cover-crest { display:block; width:111mm; height:111mm; object-fit:contain;
+    filter:drop-shadow(0 3mm 4mm #0009);margin:3mm 0 0;}
+  .print-cover-rule { width:115mm; font-size:18pt; line-height:8mm; color:#d4ad70; margin-top:3mm;
+    display:flex;align-items:center;gap:5mm; justify-content:center;}
+  .print-cover-rule:before,.print-cover-rule:after{content:'';height:.35pt; flex:1;background:#a98850;}
+  .print-cover-kicker { font:700 9pt/1.5 Georgia,serif;letter-spacing:.24em;color:#d8c39a;margin-top:2mm;}
+  .print-cover h1 {font:400 34pt/1.05 Georgia,'Times New Roman',serif;
+    letter-spacing:.03em;margin:6mm 0 0;color:#f5ecd9;}
+  .print-cover h1 span {font-size:39pt; color:#efd09a;}
+  .print-cover-description {font:italic 12pt/1.55 Georgia,serif;color:#d9dfd2;margin:5mm 0 2mm;}
+  .print-cover-facts { display:grid;grid-template-columns:repeat(3,1fr);width:156mm;border-top:.5pt solid #af8d58;
+    border-bottom:.5pt solid #af8d58;margin-top:9mm;padding:4mm 0;}
+  .print-cover-facts div {display:flex;flex-direction:column;align-items:center;justify-content:center;
+    padding:1.5mm 4mm;border-right:.4pt solid #9c815568;gap:1.5mm}
+  .print-cover-facts div:last-child{border-right:0}
+  .print-cover-facts strong {color:#efd29b;font:400 22pt Georgia,serif;}
+  .print-cover-facts span {color:#d0c7af;font:8pt/1.35 Georgia,serif;}
+  .print-cover-motto {color:#e2be86;font:italic 11pt Georgia,serif;margin-top:11mm;}
+  .print-cover-bottom { margin-top:auto;color:#c1aa84;letter-spacing:.18em;font:700 8pt/1.9 Georgia,serif; }
+  .print-cover-bottom small {font-size:6.5pt;font-weight:400;letter-spacing:.11em;}
+  /* Garante que o livro é impresso mesmo com uma pesquisa ativa */
+  .book-section[hidden],.book-section {display:block!important; margin:0!important;
+    background:#112729!important;break-before:auto!important;page-break-before:auto!important;}
+  .chapter-cover {box-sizing:border-box!important;height:297mm!important;min-height:297mm!important;
+    max-height:297mm!important;padding:14mm 13mm 10mm!important;overflow:hidden!important;
+    break-after:page!important;page-break-after:always!important;
+    background:radial-gradient(ellipse at 50% 0%,#25413b 0%,#102125 76%)!important;}
+  .chapter-cover:before{inset:6mm!important}
+  .chapter-head{font-size:9pt!important}.chapter-intro{gap:8mm!important;margin-bottom:5mm!important;min-height:31mm!important}
+  .chapter-title h2{font-size:28pt!important;line-height:1.1!important;overflow-wrap:anywhere}
+  .chapter-title p{font-size:11pt!important}.chapter-stats{gap:2mm!important;margin-top:3mm!important}
+  .chapter-stats span{font-size:8pt!important;padding:2mm 2.5mm!important}
+  .chapter-insignia .small-crest{width:31mm!important;height:33mm!important}
+  .evidence-head{font-size:8.5pt!important;margin:5mm 0 2.5mm!important}
+  .evidence-grid{grid-template-columns:1fr 1fr!important;gap:5mm!important}
+  .evidence-card{height:98mm!important;display:flex;flex-direction:column;
+    padding:3mm!important;min-width:0!important;overflow:hidden!important}
+  .evidence-card h3{flex:0 0 10mm;font-size:11.3pt!important;line-height:1.15!important;
+    margin:0 0 2mm!important;min-height:0!important}
+  .evidence-card h3 span{flex-shrink:0;min-width:7mm!important;width:7mm!important;height:7mm!important;
+    font-size:10pt!important}
+  .evidence-media{height:auto!important;flex:1!important;min-height:0!important;min-width:0!important}
+  .evidence-media img{width:100%!important;height:100%!important;object-fit:contain!important}
+  .description-recipe{margin-top:5mm!important;gap:5mm!important;grid-template-columns:1fr 1fr!important;align-items:stretch}
+  .description-block,.recipes-block{padding:4mm!important;min-height:43mm!important;box-shadow:none!important}
+  .thin-heading{font-size:8pt!important;line-height:1.3!important}
+  .description-block p{font-size:11pt!important;line-height:1.42!important;margin:3mm 0!important}
+  .source-note{font-size:8.3pt!important;line-height:1.35!important;padding-top:2mm!important}
+  .recipes-block ul{margin:2mm 0!important}
+  .recipes-block li{gap:2mm!important;padding:1.6mm 0!important}
+  .recipes-block li b{font-size:10pt!important;line-height:1.2!important}
+  .recipes-block li span{font-size:8.3pt!important;line-height:1.35!important}
+  .recipes-block small{font-size:7.5pt!important;line-height:1.4!important}
+  .to-maps{padding-top:7mm!important;font-size:8pt!important}
+  /* Mapas: dimensões fixas, textos uniformes, SEM RECORTE DO MAPA */
+  .chapter-locations{box-sizing:border-box!important;break-before:auto!important;page-break-before:auto!important;
+    min-height:297mm!important;padding:11mm 10mm 11mm!important;background:#152b2d!important}
+  .places-head{margin:0 0 5mm!important;min-height:22mm!important}
+  .places-head h3{font-size:22pt!important;line-height:1.12!important}
+  .places-head p{font-size:9pt!important;line-height:1.35!important}
+  .location-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:4.5mm!important;align-items:start!important}
+  .location-card{height:116mm!important;min-height:116mm!important;max-height:116mm!important;
+    display:flex!important;flex-direction:column!important;min-width:0!important;
+    break-inside:avoid!important;page-break-inside:avoid!important;
+    box-shadow:none!important;overflow:hidden!important}
+  .location-top{flex:none!important;min-height:10mm!important;padding:2.2mm 2.4mm!important;gap:2mm!important;}
+  .index-ref{font-size:8.5pt!important;letter-spacing:.07em!important}
+  .qty-badge{font-size:7.8pt!important;line-height:1.2!important;padding:1.7mm 2mm!important;max-width:56%;text-align:center}
+  .map-container{flex:none!important;height:55mm!important;min-height:55mm!important;margin:0 2.2mm!important;
+    background:#b7aa8b!important;overflow:hidden!important}
+  .map-container .location-image{width:100%!important;height:100%!important;object-fit:contain!important;object-position:center center!important}
+  .zoom-cue{display:none!important}
+  .location-details{flex:1!important;display:flex!important;flex-direction:column!important;
+    min-height:0!important;padding:2.6mm 3.1mm 2.2mm!important}
+  .location-details h4{flex:none!important;font-size:13.5pt!important;line-height:1.2!important;margin:0!important}
+  .location-sub{flex:none!important;font-size:9.3pt!important;line-height:1.25!important;margin-top:1mm!important}
+  .location-details p{flex:none!important;font-size:8.3pt!important;line-height:1.28!important;
+    margin:1.5mm 0!important;min-height:0!important}
+  .mini-media-head{font-size:7pt!important;letter-spacing:.12em!important;line-height:1.2!important;padding-top:1.5mm!important;margin-top:auto!important}
+  .mini-media-status{flex:none!important;gap:1.4mm!important;margin:1.2mm 0 0!important;flex-wrap:nowrap!important}
+  .mini-media-status div{flex:1!important;min-width:0!important;padding:1.3mm .6mm!important;
+    font-size:7pt!important;line-height:1.18!important;white-space:normal!important}
+  .record-actions{flex:none!important;padding:1.5mm 0 0!important;margin-top:1.5mm!important;}
+  .record-actions span{font-size:7pt!important;line-height:1.2!important}
+  .pending-image{min-height:0!important;height:100%!important}
+  .pending-image span,.pending-image strong,.pending-image small{max-width:90%!important;overflow-wrap:break-word!important}
+  .pending-image span{font-size:8pt!important}.pending-image strong{font-size:8.3pt!important}.pending-image small{font-size:7.6pt!important;line-height:1.35!important}
+  .group-ending{font-size:9pt!important;padding:4mm 0 0!important}
+}
+
+
+/* Inserção local de imagens pendentes */
+.upload-slot {position:relative;gap:5px!important;}
+.upload-label{display:inline-flex;align-items:center;justify-content:center;padding:9px 12px;margin-top:5px;
+ color:#fff1cf;background:#375a48;border:1px solid #618467;cursor:pointer;
+ font:700 10px/1.25 system-ui,sans-serif;letter-spacing:.03em;text-align:center;}
+.upload-label:hover{background:#476d53}.upload-file{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden}
+.evidence-media .uploaded-photo{width:100%;height:100%;object-fit:contain;cursor:zoom-in;}
+.no-map-pending{min-height:220px;margin-top:16px;border:1px dashed #a4895b;text-align:center;display:flex;
+ align-items:center;justify-content:center;flex-direction:column;padding:28px;background:#203734}
+.no-map-pending h4{font-size:26px;color:#dfc58f;font-weight:400;margin:7px 0}
+.no-map-pending p{font-size:14px;max-width:510px;color:#c4ceb9;line-height:1.6}
+@media print{
+ .upload-label,.upload-file{display:none!important}
+ .no-map-section{display:none!important}
+ .book-section{break-before:page!important;page-break-before:always!important}
+ .chapter-cover{break-before:page!important;page-break-before:always!important}
+ .chapter-locations:not(.no-map-section){break-after:page!important;page-break-after:always!important}
+ .print-cover{padding-bottom:20mm!important}
+ .print-cover-top{margin-top:11mm!important}
+ .print-cover-crest{width:89mm!important;height:89mm!important;margin-top:2mm!important}
+ .print-cover-description{margin-top:3mm!important}
+ .print-cover-facts{margin-top:6mm!important}
+ .print-cover-motto{margin-top:6mm!important}
+ .print-cover-bottom{line-height:1.5!important;margin-bottom:3mm!important}
+ .upload-slot .pending-symbol{font-size:15pt!important}
+ .upload-slot{padding:3mm!important}
+ .upload-slot strong{font-size:8pt!important}
+}
+
+
+/* Atlas Vicent 044 · Malva-Doce: galeria de reconhecimento e cartografia sem duplicidade */
+#malva-doce .malva-recognition-gallery { display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);height:100%;gap:5px;background:#aa9874 }
+#malva-doce .malva-recognition-gallery figure { margin:0;display:flex;flex-direction:column;min-width:0;min-height:0;overflow:hidden }
+#malva-doce .malva-recognition-gallery figure img { flex:1;min-height:0;min-width:0;width:100%;object-fit:contain;background:#a99b7b }
+#malva-doce .malva-recognition-gallery figcaption { flex:none;padding:4px 5px;color:#392c1b;background:#e2d2ae;text-align:center;font:10px/1.2 Georgia,serif }
+#malva-doce .malva-overview { margin:0 0 18px;background:#e4d6b8;border:1px solid #a88b60;overflow:hidden;color:#34291f;break-inside:avoid;page-break-inside:avoid }
+#malva-doce .malva-overview-info { padding:10px 12px 5px }
+#malva-doce .malva-overview h4 { margin:0 0 4px;font-size:19px;font-weight:400 }
+#malva-doce .malva-overview p { margin:0 0 6px;color:#66583f;font:12px/1.4 Georgia,serif }
+#malva-doce .malva-overview img {display:block;width:100%;height:290px;object-fit:contain;cursor:zoom-in;background:#b0a388}
+@media print {
+ #malva-doce .malva-recognition-gallery { height:100%!important;gap:1mm!important }
+ #malva-doce .malva-recognition-gallery figure img { height:calc(100% - 5mm)!important;max-height:calc(100% - 5mm)!important;width:100%!important;object-fit:contain!important }
+ #malva-doce .malva-recognition-gallery figcaption { font-size:7pt!important;line-height:1.1!important;padding:1mm!important }
+ #malva-doce .malva-overview { break-inside:avoid!important;page-break-inside:avoid!important;margin:2mm 0 5mm!important }
+ #malva-doce .malva-overview-info { padding:2mm 3mm 1mm!important }
+ #malva-doce .malva-overview h4 { font-size:12pt!important;margin:0 0 1mm!important }
+ #malva-doce .malva-overview p { font-size:8pt!important;line-height:1.25!important;margin:0 0 1mm!important }
+ #malva-doce .malva-overview img { height:67mm!important;object-fit:contain!important }
+}
+</style></head><body><div class="page" id="inicio"><section aria-label="Capa do atlas para impressão" class="print-cover">
+<div class="cover-ornament top-left">✦</div><div class="cover-ornament top-right">✦</div>
+<div class="print-cover-top">ARQUIVO DE CAMPO   ·   FAMÍLIA VICENT</div>
+<div class="print-cover-rule">✧</div>
+<img alt="Brasão oficial da Família Vicent" class="print-cover-crest" src="assets/image-65576fa913d360c1.webp"/>
+<div class="print-cover-kicker">CÓDICE DE INGREDIENTES MÁGICOS</div>
+<h1>Atlas de<br/><span>Coletáveis</span></h1>
+<div class="print-cover-rule">✧</div>
+<p class="print-cover-description">Reconhecimento na natureza, descrição do inventário,<br/>utilização em poções e mapas dos locais de coleta.</p>
+<div class="print-cover-facts"><div><strong>12</strong><span>Ingredientes</span></div><div><strong>32</strong><span>Registros únicos</span></div><div><strong>20</strong><span>Horklumps confirmados</span></div></div>
+<div class="print-cover-motto">« La magie nous unit, le courage nous protège. »</div>
+<div class="print-cover-bottom">EDIÇÃO 048  •  NOVEMBRO DE 2026<br/><small>ARQUIVO DA FAMÍLIA VICENT · SEM PEDRAS DA LUA</small></div>
+<div class="cover-ornament bottom-left">✦</div><div class="cover-ornament bottom-right">✦</div>
+</section>
+<header class="toolbar"><div class="brand"><img alt="Brasão oficial da Família Vicent" class="brand-crest" src="assets/image-65576fa913d360c1.webp"/><div><b>FAMÍLIA VICENT</b><small>ARQUIVO DO VALE · CÓDICE DE CAMPO</small></div></div><div class="top-actions"><a href="#indice">Índice dos ingredientes</a><button id="print-button" type="button">⎙ Imprimir atlas</button><button id="save-html" title="Salvar uma cópia do HTML incluindo imagens importadas" type="button">⇩ Salvar HTML com imagens</button></div></header>
+<div class="mast"><div class="eyebrow">MANUSCRITOS MÁGICOS · EDIÇÃO 020</div><h1>Atlas de <span>Coletáveis</span></h1><div class="rule">✧</div><p>Uma biblioteca de reconhecimento, descrição e cartografia dos ingredientes encontrados pelos exploradores da Família Vicent.</p><p class="motto">« La magie nous unit, le courage nous protège. »</p></div>
+<div class="catalog-info"><div><b>07</b><span>Ingredientes classificados</span></div><div><b>15</b><span>Registros únicos</span></div><div><b id="found-number">0</b><span>Pontos marcados como coletados</span></div></div>
+<div class="reader-guide"><strong>Como consultar:</strong> cada ingrediente começa com sua ficha de reconhecimento na natureza, descrição do inventário e utilização nas poções. Em seguida aparecem todos os seus pontos de coleta. <strong>Campos tracejados</strong> identificam apenas imagens que ainda não foram enviadas. O mapa nº 008 consta em dois capítulos porque é uma coleta mista de Ditamo e Horklump. Nenhuma Pedra da Lua foi incluída.</div>
+<div class="search-row"><input aria-label="Pesquisar ingredientes" id="search" placeholder="Pesquisar ingrediente, local ou poção..." type="search"/><button id="clear-search" type="button">Limpar pesquisa</button></div><div class="no-search" id="no-search">Nenhum ingrediente encontrado para esta pesquisa.</div>
+<div class="catalog-layout" id="indice"><aside class="toc"><h2>Índice de ingredientes</h2><nav><a class="nav-link" href="#horklump"><span>I</span>Suco de Horklump<small>9 locais</small></a><a class="nav-link" href="#ditamo"><span>II</span>Folhas de Ditamo<small>2 locais</small></a><a class="nav-link" href="#sanguessuga"><span>III</span>Suco de Sanguessuga<small>2 locais</small></a><a class="nav-link" href="#espirros"><span>IV</span>Erva-dos-Espirros<small>3 locais</small></a><a class="nav-link" href="#tomilho"><span>V</span>Tomilho<small>4 locais</small></a><a class="nav-link" href="#figo"><span>VI</span>Fruto de Figo-Murcho<small>4 locais</small></a><a class="nav-link" href="#crisopas"><span>VII</span>Moscas Crisopas<small>0 locais</small></a><a class="nav-link" href="#ovos-ashwinder"><span>VIII</span> Ovos de Ashwinder<small>0 locais</small></a><a class="nav-link" href="#cogumelo-saltitante"><span>IX</span>Chapéus de Cogumelo Saltitante<small>0 locais</small></a><a class="nav-link" href="#madeira-antiga"><span>X</span>Madeira Antiga<small>1 local</small></a><a class="nav-link" href="#malva-doce"><span>XI</span>Malva-Doce<small>6 locais</small></a><a class="nav-link" href="#arruda"><span>XII</span>Arruda<small>4 locais</small></a></nav><div class="toc-footer">Mapas originais incorporados no arquivo. Funciona sem internet. Os registros ausentes recebem identificação de pendência.</div></aside><main class="catalog-content"><section class="book-section" data-search="Suco de Horklump Poção Wiggenweld Upper Hogsfield Lago de Hogwarts Aranshire Aranshire Aranshire Aranshire Brocburrow Lower Hogsfield Irondale" data-title="Suco de Horklump" id="horklump">
+<div class="chapter-cover">
+<div class="chapter-head"><span class="roman">CAPÍTULO I</span><span class="chapter-type">Fungos &amp; extratos</span></div>
+<div class="chapter-rule">✦</div>
+<div class="chapter-intro"><div class="chapter-title"><div class="eyebrow">ARQUIVO DE INGREDIENTES · FAMÍLIA VICENT</div><h2>Suco de Horklump</h2><p>Extrato do fungo horklump</p><div class="chapter-stats"><span>◆ 20 unidades confirmadas</span><span>⌖ 9 referências de localização</span></div></div>
+<div class="chapter-insignia"><img alt="Brasão da Família Vicent" class="small-crest" src="assets/image-65576fa913d360c1.webp"/></div></div>
+<div class="evidence-head">IDENTIFICAÇÃO E DESCRIÇÃO DO INGREDIENTE</div>
+<div class="evidence-grid"><div class="evidence-card"><h3><span>01</span> Reconhecimento na natureza</h3><div class="evidence-media"><img alt="Reconhecimento na natureza: Suco de Horklump" class="hero-photo zoomable" data-caption="Reconhecimento na natureza: Suco de Horklump" decoding="sync" loading="eager" src="assets/image-09fd95efd12a8150.webp" tabindex="0"/></div></div>
+<div class="evidence-card"><h3><span>02</span> Reconhecimento na mochila</h3><div class="evidence-media"><img alt="Descrição original do inventário: Suco de Horklump" class="inventory-photo zoomable" data-caption="Descrição original do inventário: Suco de Horklump" decoding="sync" loading="eager" src="assets/image-0749afef82588e04.webp" tabindex="0"/></div></div></div>
+<div class="description-recipe"><div class="description-block"><div class="thin-heading">DESCRIÇÃO REGISTRADA</div><p>Suco pálido e azedo extraído do fungo horklump, usado como ingrediente da Poção Wiggenweld.</p><div class="source-note">Reconhecimento e inventário enviados com o registro nº 017.</div></div>
+<div class="recipes-block"><div class="thin-heading">UTILIZAÇÃO EM POÇÕES</div><ul><li><div class="potion-dot">✣</div><div><b>Poção Wiggenweld</b><span>1 Suco de Horklump por preparo</span></div></li></ul><small>Receitas transcritas das imagens enviadas. As capturas de poções não foram incorporadas.</small></div></div>
+<div class="to-maps">CONTINUAÇÃO DO CAPÍTULO <span>✧</span> MAPAS E PONTOS DE COLETA <b>↓</b></div>
+</div>
+<div class="chapter-locations"><div class="places-head"><div><div class="eyebrow">CADERNO CARTOGRÁFICO · I</div><h3>Locais de coleta</h3><p>Mapas originais, com a seta roxa indicando cada ponto identificado.</p></div><div class="map-count">09<span>REFERÊNCIAS</span></div></div>
+<div class="location-grid"><article class="location-card" data-entry="005" id="local-005">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 005</span><span class="qty-badge">2 unidades</span></div>
+<div class="map-container"><img alt="Mapa original do registro 005: Upper Hogsfield — Trilha a sudoeste da vila" class="location-image zoomable" data-caption="Mapa original do registro 005: Upper Hogsfield — Trilha a sudoeste da vila" decoding="sync" loading="eager" src="assets/image-e4589d68b5488e5b.webp" tabindex="0"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Upper Hogsfield</h4><div class="location-sub">Trilha a sudoeste da vila</div><p>A sudoeste de Upper Hogsfield (Stirling), perto da estrada, a oeste do rio.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button aria-pressed="false" class="collect-btn" data-collect="005" type="button">□ Marcar coletado</button></div>
+</div></article><article class="location-card" data-entry="006" id="local-006">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 006</span><span class="qty-badge">2 unidades</span></div>
+<div class="map-container"><img alt="Mapa original do registro 006: Lago de Hogwarts — Margem leste · ponto norte" class="location-image zoomable" data-caption="Mapa original do registro 006: Lago de Hogwarts — Margem leste · ponto norte" decoding="sync" loading="eager" src="assets/image-5488d3c2a72c8d1d.webp" tabindex="0"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Lago de Hogwarts</h4><div class="location-sub">Margem leste · ponto norte</div><p>A leste do grande lago de Hogwarts, ao norte de Aranshire e a oeste da linha férrea.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button aria-pressed="false" class="collect-btn" data-collect="006" type="button">□ Marcar coletado</button></div>
+</div></article><article class="location-card" data-entry="007" id="local-007">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 007</span><span class="qty-badge">2 unidades</span></div>
+<div class="map-container"><img alt="Mapa original do registro 007: Aranshire — Próximo à ponte ferroviária" class="location-image zoomable" data-caption="Mapa original do registro 007: Aranshire — Próximo à ponte ferroviária" decoding="sync" loading="eager" src="assets/image-c59a8fda2bef0e29.webp" tabindex="0"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Aranshire</h4><div class="location-sub">Próximo à ponte ferroviária</div><p>Na margem leste do lago, imediatamente a oeste dos trilhos, junto à travessia do curso d’água.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button aria-pressed="false" class="collect-btn" data-collect="007" type="button">□ Marcar coletado</button></div>
+</div></article><article class="location-card" data-entry="008" id="local-008">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 008</span><span class="qty-badge">Quantidade não informada</span></div>
+<div class="map-container"><img alt="Mapa original do registro 008: Aranshire — Coleta mista: Ditamo e Horklump" class="location-image zoomable" data-caption="Mapa original do registro 008: Aranshire — Coleta mista: Ditamo e Horklump" decoding="sync" loading="eager" src="assets/image-67475d917cdf971a.webp" tabindex="0"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Aranshire</h4><div class="location-sub">Coleta mista: Ditamo e Horklump</div><p>A oeste dos trilhos, nas proximidades do vilarejo de Aranshire. O mesmo ponto contém Ditamo e Horklump.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button aria-pressed="false" class="collect-btn" data-collect="008" type="button">□ Marcar coletado</button></div>
+</div></article><article class="location-card" data-entry="010" id="local-010">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 010</span><span class="qty-badge">Quantidade não informada</span></div>
+<div class="map-container"><img alt="Mapa original do registro 010: Aranshire — Leste da ferrovia · travessia" class="location-image zoomable" data-caption="Mapa original do registro 010: Aranshire — Leste da ferrovia · travessia" decoding="sync" loading="eager" src="assets/image-647b19be55c49e4f.webp" tabindex="0"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Aranshire</h4><div class="location-sub">Leste da ferrovia · travessia</div><p>Na margem leste do lago, ao norte de Aranshire, a leste dos trilhos e próximo à passagem de um curso d’água.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button aria-pressed="false" class="collect-btn" data-collect="010" type="button">□ Marcar coletado</button></div>
+</div></article><article class="location-card" data-entry="011" id="local-011">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 011</span><span class="qty-badge">3 unidades</span></div>
+<div class="map-container"><img alt="Mapa original do registro 011: Aranshire — Trilha ao sul do vilarejo" class="location-image zoomable" data-caption="Mapa original do registro 011: Aranshire — Trilha ao sul do vilarejo" decoding="sync" loading="eager" src="assets/image-a2f515dbd0cd7714.webp" tabindex="0"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Aranshire</h4><div class="location-sub">Trilha ao sul do vilarejo</div><p>Ao sul de Aranshire, a leste da ferrovia, próximo à encosta e ao caminho que acompanha os trilhos.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button aria-pressed="false" class="collect-btn" data-collect="011" type="button">□ Marcar coletado</button></div>
+</div></article><article class="location-card" data-entry="012" id="local-012">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 012</span><span class="qty-badge">4 unidades</span></div>
+<div class="map-container"><img alt="Mapa original do registro 012: Brocburrow — Leste do vilarejo · pequenos lagos" class="location-image zoomable" data-caption="Mapa original do registro 012: Brocburrow — Leste do vilarejo · pequenos lagos" decoding="sync" loading="eager" src="assets/image-0a529c4bfdb0316a.webp" tabindex="0"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Brocburrow</h4><div class="location-sub">Leste do vilarejo · pequenos lagos</div><p>A leste de Brocburrow (Motherwell), na região das trilhas e pequenos lagos.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button aria-pressed="false" class="collect-btn" data-collect="012" type="button">□ Marcar coletado</button></div>
+</div></article><article class="location-card" data-entry="013" id="local-013">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 013</span><span class="qty-badge">4 unidades</span></div>
+<div class="map-container"><img alt="Mapa original do registro 013: Lower Hogsfield — Sul do vilarejo · oeste do rio" class="location-image zoomable" data-caption="Mapa original do registro 013: Lower Hogsfield — Sul do vilarejo · oeste do rio" decoding="sync" loading="eager" src="assets/image-d1f16947ebcc4369.webp" tabindex="0"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Lower Hogsfield</h4><div class="location-sub">Sul do vilarejo · oeste do rio</div><p>Ao sul de Lower Hogsfield, perto das trilhas, a oeste do curso d’água.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button aria-pressed="false" class="collect-btn" data-collect="013" type="button">□ Marcar coletado</button></div>
+</div></article><article class="location-card" data-entry="017" id="local-017">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 017</span><span class="qty-badge">3 unidades</span></div>
+<div class="map-container"><img alt="Mapa original do registro 017: Irondale — Área pantanosa · borda leste" class="location-image zoomable" data-caption="Mapa original do registro 017: Irondale — Área pantanosa · borda leste" decoding="sync" loading="eager" src="assets/image-74a02f1f5ef1397e.webp" tabindex="0"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Irondale</h4><div class="location-sub">Área pantanosa · borda leste</div><p>A nordeste de Irondale, à borda leste da região pantanosa, nas trilhas próximas à encosta.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button aria-pressed="false" class="collect-btn" data-collect="017" type="button">□ Marcar coletado</button></div>
+</div></article></div>
+<div class="group-ending">✧   Suco de Horklump   ✧</div>
+</div>
+</section><section class="book-section" data-search="Folhas de Ditamo Poção Wiggenweld Essência de Ditamno Aranshire" data-title="Folhas de Ditamo" id="ditamo">
+<div class="chapter-cover">
+<div class="chapter-head"><span class="roman">CAPÍTULO II</span><span class="chapter-type">Ervas &amp; folhas</span></div>
+<div class="chapter-rule">✦</div>
+<div class="chapter-intro"><div class="chapter-title"><div class="eyebrow">ARQUIVO DE INGREDIENTES · FAMÍLIA VICENT</div><h2>Folhas de Ditamo</h2><p>Planta de uso medicinal em poções</p><div class="chapter-stats"><span>◆ Quantidade não informada</span><span>⌖ 2 referências de localização</span></div></div>
+<div class="chapter-insignia"><img alt="Brasão da Família Vicent" class="small-crest" src="assets/image-65576fa913d360c1.webp"/></div></div>
+<div class="evidence-head">IDENTIFICAÇÃO E DESCRIÇÃO DO INGREDIENTE</div>
+<div class="evidence-grid"><div class="evidence-card"><h3><span>01</span> Reconhecimento na natureza</h3><div class="evidence-media"><img alt="Reconhecimento na natureza: Folhas de Ditamno" class="hero-photo zoomable" data-caption="Reconhecimento na natureza: Folhas de Ditamno" decoding="sync" loading="eager" src="assets/image-2dd927d769515f29.png"/></div></div>
+<div class="evidence-card"><h3><span>02</span> Reconhecimento na mochila</h3><div class="evidence-media"><img alt="Descrição do inventário: Folhas de Ditamno" class="hero-photo zoomable" data-caption="Descrição do inventário: Folhas de Ditamno" decoding="sync" loading="eager" src="assets/image-172c7a4d8f240293.png"/></div></div></div>
+<div class="description-recipe"><div class="description-block"><div class="thin-heading">DESCRIÇÃO REGISTRADA</div><p>Folhas frescas valorizadas em preparados restauradores. Ingrediente empregado na Poção Wiggenweld e na Essência de Ditamno.</p><div class="source-note">As imagens de reconhecimento e de descrição de Ditamno já foram incorporadas a esta edição, junto do mapa do registro 008.</div></div>
+<div class="recipes-block"><div class="thin-heading">UTILIZAÇÃO EM POÇÕES</div><ul><li><div class="potion-dot">✣</div><div><b>Poção Wiggenweld</b><span>1 Folha de Ditamno por preparo</span></div></li><li><div class="potion-dot">✣</div><div><b>Essência de Ditamno</b><span>3 Folhas de Ditamno por preparo</span></div></li></ul><small>Receitas transcritas das imagens enviadas. As capturas de poções não foram incorporadas.</small></div></div>
+<div class="to-maps">CONTINUAÇÃO DO CAPÍTULO <span>✧</span> MAPAS E PONTOS DE COLETA <b>↓</b></div>
+</div>
+<div class="chapter-locations"><div class="places-head"><div><div class="eyebrow">CADERNO CARTOGRÁFICO · II</div><h3>Locais de coleta</h3><p>Mapas originais, com a seta roxa indicando cada ponto identificado.</p></div><div class="map-count">01<span>2 locais</span></div></div>
+<div class="location-grid"><article class="location-card" data-entry="008" id="local-008-ditamo">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 008</span><span class="qty-badge">Quantidade não informada</span></div>
+<div class="map-container"><img alt="Mapa original do registro 008: Aranshire — Coleta mista: Ditamo e Horklump" class="location-image zoomable" data-caption="Mapa original do registro 008: Aranshire — Coleta mista: Ditamo e Horklump" decoding="sync" loading="eager" src="assets/image-67475d917cdf971a.webp" tabindex="0"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Aranshire</h4><div class="location-sub">Coleta mista: Ditamo e Horklump</div><p>A oeste dos trilhos, nas proximidades do vilarejo de Aranshire. O mesmo ponto contém Ditamo e Horklump.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button aria-pressed="false" class="collect-btn" data-collect="008" type="button">□ Marcar coletado</button></div>
+</div></article><article class="location-card" data-entry="030" id="local-030">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 030</span><span class="qty-badge">Quantidade não informada</span></div>
+<div class="map-container"><img alt="Mapa original do registro 030: Folhas de Ditamo perto de Lower Hogsfield" class="location-image zoomable" data-caption="Mapa original · Folhas de Ditamo · Perto de Lower Hogsfield" decoding="sync" loading="eager" src="assets/image-8376498984954733.png"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Perto de Lower Hogsfield</h4><div class="location-sub">Trilhas ao sul do vilarejo</div><p>Local de Folhas de Ditamo perto de Lower Hogsfield, nas trilhas ao sul do vilarejo, em direção à margem do lago. A seta roxa marca a referência no mapa.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button aria-pressed="false" class="collect-btn" data-collect="030" type="button">□ Marcar coletado</button></div>
+</div></article></div>
+<div class="group-ending">✧   Folhas de Ditamo   ✧</div>
+</div>
+</section><section class="book-section" data-search="Suco de Sanguessuga Poção Polissuco Poção Maxima Essência de Murtisco Lago de Hogwarts Hogsmeade novo lago segundo local registro 022" data-title="Suco de Sanguessuga" id="sanguessuga">
+<div class="chapter-cover">
+<div class="chapter-head"><span class="roman">CAPÍTULO III</span><span class="chapter-type">Extratos &amp; ingredientes</span></div>
+<div class="chapter-rule">✦</div>
+<div class="chapter-intro"><div class="chapter-title"><div class="eyebrow">ARQUIVO DE INGREDIENTES · FAMÍLIA VICENT</div><h2>Suco de Sanguessuga</h2><p>Ingrediente de poções encontrado em regiões lacustres</p><div class="chapter-stats"><span>◆ Região de coleta geral</span><span>⌖ 2 referências de localização</span></div></div>
+<div class="chapter-insignia"><img alt="Brasão da Família Vicent" class="small-crest" src="assets/image-65576fa913d360c1.webp"/></div></div>
+<div class="evidence-head">IDENTIFICAÇÃO E DESCRIÇÃO DO INGREDIENTE</div>
+<div class="evidence-grid"><div class="evidence-card"><h3><span>01</span> Reconhecimento na natureza</h3><div class="evidence-media"><img alt="Reconhecimento na natureza: Suco de Sanguessuga" class="hero-photo zoomable" data-caption="Reconhecimento na natureza: Suco de Sanguessuga" decoding="sync" loading="eager" src="assets/image-cc93061f82c53e67.png"/></div></div>
+<div class="evidence-card"><h3><span>02</span> Reconhecimento na mochila</h3><div class="evidence-media"><img alt="Descrição do inventário: Suco de Sanguessuga" class="inventory-photo zoomable" data-caption="Descrição do inventário: Suco de Sanguessuga" decoding="sync" loading="eager" src="assets/image-397d9edccd4aae1d.png"/></div></div></div>
+<div class="description-recipe"><div class="description-block"><div class="thin-heading">DESCRIÇÃO REGISTRADA</div><p>Ingrediente de poção em sua própria forma ou recipiente original. Pode ser encontrado ao redor do Lago de Hogwarts e é utilizado em poções como Polissuco, Máxima e Essência de Murtisco.</p><div class="source-note">As imagens de reconhecimento na natureza e de descrição do inventário do Suco de Sanguessuga já foram incorporadas a esta edição.</div></div>
+<div class="recipes-block"><div class="thin-heading">UTILIZAÇÃO EM POÇÕES</div><ul><li><div class="potion-dot">✣</div><div><b>Poção Polissuco</b><span>1 Suco de Sanguessuga por preparo</span></div></li><li><div class="potion-dot">✣</div><div><b>Poção Maxima</b><span>1 Suco de Sanguessuga por preparo</span></div></li><li><div class="potion-dot">✣</div><div><b>Essência de Murtisco</b><span>1 Suco de Sanguessuga por preparo</span></div></li></ul><small>Receitas transcritas das imagens enviadas. As capturas de poções não foram incorporadas.</small></div></div>
+<div class="to-maps">CONTINUAÇÃO DO CAPÍTULO <span>✧</span> MAPAS E PONTOS DE COLETA <b>↓</b></div>
+</div>
+<div class="chapter-locations"><div class="places-head"><div><div class="eyebrow">CADERNO CARTOGRÁFICO · III</div><h3>Locais de coleta</h3><p>Mapas originais, com a seta roxa indicando cada ponto identificado.</p></div><div class="map-count">02<span>REFERÊNCIAS</span></div></div>
+<div class="location-grid"><article class="location-card" data-entry="009" id="local-009">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 009</span><span class="qty-badge">Quantidade não informada</span></div>
+<div class="map-container"><img alt="Mapa original: Lago de Hogwarts — toda a volta do lago" class="location-image zoomable" data-caption="Lago de Hogwarts · Toda a volta do lago" decoding="sync" loading="eager" src="assets/image-c8e198f8ba6f4879.png"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Lago de Hogwarts</h4><div class="location-sub">Toda a volta do lago</div><p>Suco de Sanguessuga encontrado ao redor das margens do Lago de Hogwarts. Indicação geral, sem ponto único sinalizado.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button aria-pressed="false" class="collect-btn" data-collect="009" type="button">□ Marcar coletado</button></div>
+</div></article><article class="location-card" data-entry="022" id="local-022">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 022</span><span class="qty-badge">Quantidade não informada</span></div>
+<div class="map-container"><img alt="Mapa original do registro 022: localização de Suco de Sanguessuga no entorno do lago indicado perto de Hogsmeade" class="location-image zoomable" data-caption="Registro 022 — Suco de Sanguessuga ao redor do lago indicado no mapa da região de Hogsmeade" decoding="sync" loading="eager" src="assets/image-1cbf458558627c40.webp" tabindex="0"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details">
+<h4>Perto de Hogsmeade</h4>
+<div class="location-sub">Entorno do lago indicado no mapa</div>
+<p>Suco de Sanguessuga encontrado ao redor deste lago na região de Hogsmeade, conforme a referência visual enviada. A indicação refere-se ao entorno do lago, não apenas ao ponto da seta roxa.</p>
+<div class="record-actions"><span>✦ Mapa = referência da região</span><button aria-pressed="false" class="collect-btn" data-collect="022" type="button">□ Marcar coletado</button></div>
+</div>
+</article></div>
+<div class="group-ending">✧   Suco de Sanguessuga   ✧</div>
+</div>
+</section><section class="book-section" data-search="Erva-dos-Espirros Poção Revigorante Upper Hogsfield" data-title="Erva-dos-Espirros" id="espirros">
+<div class="chapter-cover">
+<div class="chapter-head"><span class="roman">CAPÍTULO IV</span><span class="chapter-type">Ervas &amp; folhas</span></div>
+<div class="chapter-rule">✦</div>
+<div class="chapter-intro"><div class="chapter-title"><div class="eyebrow">ARQUIVO DE INGREDIENTES · FAMÍLIA VICENT</div><h2>Erva-dos-Espirros</h2><p>Erva silvestre colhida em encostas</p><div class="chapter-stats"><span>◆ 2 unidades confirmadas; 1 ponto sem quantidade informada</span><span>⌖ 3 referências de localização</span></div></div>
+<div class="chapter-insignia"><img alt="Brasão da Família Vicent" class="small-crest" src="assets/image-65576fa913d360c1.webp"/></div></div>
+<div class="evidence-head">IDENTIFICAÇÃO E DESCRIÇÃO DO INGREDIENTE</div>
+<div class="evidence-grid"><div class="evidence-card"><h3><span>01</span> Reconhecimento na natureza</h3><div class="evidence-media"><img alt="Reconhecimento na natureza: Erva-dos-Espirros" class="hero-photo zoomable" data-caption="Reconhecimento na natureza: Erva-dos-Espirros" decoding="sync" loading="eager" src="assets/image-75676cd23008e82c.png"/></div></div>
+<div class="evidence-card"><h3><span>02</span> Reconhecimento na mochila</h3><div class="evidence-media"><img alt="Descrição original do inventário: Erva-dos-Espirros" class="inventory-photo zoomable" data-caption="Descrição original do inventário: Erva-dos-Espirros" decoding="sync" loading="eager" src="assets/image-5f06fa4844b5966b.webp" tabindex="0"/></div></div></div>
+<div class="description-recipe"><div class="description-block"><div class="thin-heading">DESCRIÇÃO REGISTRADA</div><p>Um raminho de erva-dos-espirros silvestre, colhido nas encostas; basta cheirá-la para entender o nome.</p><div class="source-note">As imagens de reconhecimento na natureza, descrição do inventário e localização da Erva-dos-Espirros já foram incorporadas a esta edição.</div></div>
+<div class="recipes-block"><div class="thin-heading">UTILIZAÇÃO EM POÇÕES</div><ul><li><div class="potion-dot">✣</div><div><b>Poção Revigorante</b><span>2 Ervas-dos-Espirros por preparo</span></div></li></ul><small>Receitas transcritas das imagens enviadas. As capturas de poções não foram incorporadas.</small></div></div>
+<div class="to-maps">CONTINUAÇÃO DO CAPÍTULO <span>✧</span> MAPAS E PONTOS DE COLETA <b>↓</b></div>
+</div>
+<div class="chapter-locations"><div class="places-head"><div><div class="eyebrow">CADERNO CARTOGRÁFICO · IV</div><h3>Locais de coleta</h3><p>Mapas originais, com a seta roxa indicando cada ponto identificado.</p></div><div class="map-count">03<span>REFERÊNCIAS</span></div></div>
+<div class="location-grid"><article class="location-card" data-entry="014" id="local-014">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 014</span><span class="qty-badge">1 unidade</span></div>
+<div class="map-container"><img alt="Mapa original do registro 014: Upper Hogsfield — margem do rio a leste da vila" class="location-image zoomable" data-caption="Mapa original do registro 014: Upper Hogsfield — margem do rio a leste da vila" decoding="sync" loading="eager" src="assets/image-2a678a213ece6955.png" tabindex="0"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Upper Hogsfield</h4><div class="location-sub">Trilha a leste da vila</div><p>Ponto registrado perto de Upper Hogsfield, na margem do rio a leste da vila, conforme indicado pela seta roxa no mapa original.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button aria-pressed="false" class="collect-btn" data-collect="014" type="button">□ Marcar coletado</button></div>
+</div></article><article class="location-card" data-entry="021" id="local-021">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 021</span><span class="qty-badge">Quantidade não informada</span></div>
+<div class="map-container"><img alt="Mapa original do registro 021: novo ponto de Erva-dos-Espirros próximo a Upper Hogsfield, a leste do rio" class="location-image zoomable" data-caption="Mapa original do registro 021: novo ponto de Erva-dos-Espirros próximo a Upper Hogsfield, a leste do rio" decoding="sync" loading="eager" src="assets/image-97ce13900e8f7b74.png" tabindex="0"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Upper Hogsfield · Novo ponto</h4><div class="location-sub">Encosta a leste do rio</div><p>Novo ponto de Erva-dos-Espirros a leste de Upper Hogsfield, do lado oriental do rio, junto à trilha que acompanha a encosta. A seta roxa indica a localização no mapa enviado.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button aria-pressed="false" class="collect-btn" data-collect="021" type="button">□ Marcar coletado</button></div>
+</div></article><article class="location-card" data-entry="023" id="local-023">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 023</span><span class="qty-badge">1 unidade</span></div>
+<div class="map-container"><img alt="Mapa original do registro 023: Erva-dos-Espirros, próximo a Upper Hogsfield, a leste do rio e perto da curva da trilha" class="location-image zoomable" data-caption="Mapa original do registro 023: Erva-dos-Espirros, próximo a Upper Hogsfield, a leste do rio e perto da curva da trilha" decoding="sync" loading="eager" src="assets/image-a74f7d76f801c32b.png" tabindex="0"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Upper Hogsfield · Terceiro ponto</h4><div class="location-sub">Leste do rio · trilha na encosta</div><p>1 Erva-dos-Espirros, no lado leste do rio, perto da curva da trilha a leste/sudeste de Upper Hogsfield. A seta roxa mostra a posição exata no mapa enviado.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button aria-pressed="false" class="collect-btn" data-collect="023" type="button">□ Marcar coletado</button></div>
+</div></article></div>
+<div class="group-ending">✧   Erva-dos-Espirros   ✧</div>
+</div>
+</section><section class="book-section" data-search="Tomilho Poção Revigorante Lower Hogsfield Brocburrow Brocburrow 2 Tomilhos Oeste da ferrovia trilhas 019 Hogsmeade trilhas pequeno lago" data-title="Tomilho" id="tomilho">
+<div class="chapter-cover">
+<div class="chapter-head"><span class="roman">CAPÍTULO V</span><span class="chapter-type">Ervas &amp; folhas</span></div>
+<div class="chapter-rule">✦</div>
+<div class="chapter-intro"><div class="chapter-title"><div class="eyebrow">ARQUIVO DE INGREDIENTES · FAMÍLIA VICENT</div><h2>Tomilho</h2><p>Erva perfumada de folhas miúdas</p><div class="chapter-stats"><span>◆ 6 unidades confirmadas</span><span>⌖ 4 referências de localização</span></div></div>
+<div class="chapter-insignia"><img alt="Brasão da Família Vicent" class="small-crest" src="assets/image-65576fa913d360c1.webp"/></div></div>
+<div class="evidence-head">IDENTIFICAÇÃO E DESCRIÇÃO DO INGREDIENTE</div>
+<div class="evidence-grid"><div class="evidence-card"><h3><span>01</span> Reconhecimento na natureza</h3><div class="evidence-media"><img alt="Reconhecimento na natureza: Tomilho" class="hero-photo zoomable" data-caption="Reconhecimento na natureza: Tomilho" decoding="sync" loading="eager" src="assets/image-94fc2db3dfcfe77b.webp" tabindex="0"/></div></div>
+<div class="evidence-card"><h3><span>02</span> Reconhecimento na mochila</h3><div class="evidence-media"><img alt="Descrição original do inventário: Tomilho" class="inventory-photo zoomable" data-caption="Descrição original do inventário: Tomilho" decoding="sync" loading="eager" src="assets/image-2493c7e0d9902ede.webp" tabindex="0"/></div></div></div>
+<div class="description-recipe"><div class="description-block"><div class="thin-heading">DESCRIÇÃO REGISTRADA</div><p>Tomilho silvestre colhido em terreno soalheiro, perfumado e de folhas miúdas.</p><div class="source-note">Imagens de reconhecimento e inventário recebidas com o registro nº 015; o nº 016 tem apenas mapa próprio.</div></div>
+<div class="recipes-block"><div class="thin-heading">UTILIZAÇÃO EM POÇÕES</div><ul><li><div class="potion-dot">✣</div><div><b>Poção Revigorante</b><span>1 Tomilho por preparo</span></div></li></ul><small>Receitas transcritas das imagens enviadas. As capturas de poções não foram incorporadas.</small></div></div>
+<div class="to-maps">CONTINUAÇÃO DO CAPÍTULO <span>✧</span> MAPAS E PONTOS DE COLETA <b>↓</b></div>
+</div>
+<div class="chapter-locations"><div class="places-head"><div><div class="eyebrow">CADERNO CARTOGRÁFICO · V</div><h3>Locais de coleta</h3><p>Mapas originais, com a seta roxa indicando cada ponto identificado.</p></div><div class="map-count">04<span> REFERÊNCIAS</span></div></div>
+<div class="location-grid"><article class="location-card" data-entry="015" id="local-015">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 015</span><span class="qty-badge">2 unidades</span></div>
+<div class="map-container"><img alt="Mapa original do registro 015: Lower Hogsfield — Trilha a sudeste" class="location-image zoomable" data-caption="Mapa original do registro 015: Lower Hogsfield — Trilha a sudeste" decoding="sync" loading="eager" src="assets/image-823a146103a1a9ac.webp" tabindex="0"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Lower Hogsfield</h4><div class="location-sub">Trilha a sudeste</div><p>Ao sul/sudeste de Lower Hogsfield, nas trilhas a oeste do rio.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button aria-pressed="false" class="collect-btn" data-collect="015" type="button">□ Marcar coletado</button></div>
+</div></article><article class="location-card" data-entry="016" id="local-016">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 016</span><span class="qty-badge">1 unidade</span></div>
+<div class="map-container"><img alt="Mapa original do registro 016: Brocburrow — Oeste da ferrovia" class="location-image zoomable" data-caption="Mapa original do registro 016: Brocburrow — Oeste da ferrovia" decoding="sync" loading="eager" src="assets/image-2566009c4918e3a0.webp" tabindex="0"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Brocburrow</h4><div class="location-sub">Oeste da ferrovia</div><p>No mapa “Perto de Brocburrow”, a oeste dos trilhos e a sudeste do lago, no ponto indicado.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button aria-pressed="false" class="collect-btn" data-collect="016" type="button">□ Marcar coletado</button></div>
+</div></article><article class="location-card" data-entry="019" id="local-019">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 019</span><span class="qty-badge">2 unidades</span></div>
+<div class="map-container"><img alt="Mapa original do registro 019: 2 Tomilhos a oeste da ferrovia, perto de Brocburrow" class="location-image zoomable" data-caption="Registro 019 — 2 Tomilhos, a oeste da ferrovia e a sudoeste de Brocburrow (seta roxa)" decoding="sync" loading="eager" src="assets/image-aa7a3fd2d9d08ef7.webp" tabindex="0"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Brocburrow</h4><div class="location-sub">Trilhas a oeste da ferrovia</div><p>A oeste dos trilhos e a sudoeste de Brocburrow, junto às trilhas a leste do rio. Ponto exato indicado pela seta roxa.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button aria-pressed="false" class="collect-btn" data-collect="019" type="button">□ Marcar coletado</button></div>
+</div></article><article class="location-card" data-entry="024" id="local-024">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 024</span><span class="qty-badge">1 unidade</span></div>
+<div class="map-container"><img alt="Mapa original do registro 024 — 1 Tomilho perto de Hogsmeade, nas trilhas junto ao pequeno lago" class="location-image zoomable" data-caption="Registro 024 — 1 Tomilho perto de Hogsmeade (seta roxa)" decoding="sync" loading="eager" src="assets/image-01e95698345f9bcb.webp" tabindex="0"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Perto de Hogsmeade</h4><div class="location-sub">Trilhas próximas ao pequeno lago</div><p>A oeste de Hogsmeade, nas trilhas próximas a um pequeno lago e curso d’água. Ponto indicado pela seta roxa no mapa.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button aria-pressed="false" class="collect-btn" data-collect="024" type="button">□ Marcar coletado</button></div>
+</div></article></div>
+<div class="group-ending">✧   Tomilho   ✧</div>
+</div>
+</section><section class="book-section" data-search="Fruto de Figo-Murcho Poção de Gunhilda Lower Hogsfield" data-title="Fruto de Figo-Murcho" id="figo">
+<div class="chapter-cover">
+<div class="chapter-head"><span class="roman">CAPÍTULO VI</span><span class="chapter-type">Frutos &amp; ingredientes</span></div>
+<div class="chapter-rule">✦</div>
+<div class="chapter-intro"><div class="chapter-title"><div class="eyebrow">ARQUIVO DE INGREDIENTES · FAMÍLIA VICENT</div><h2>Fruto de Figo-Murcho</h2><p>Fruto protegido para o preparo de poções</p><div class="chapter-stats"><span>◆ 3 unidades confirmadas</span><span>⌖ 4 referências de localização</span></div></div>
+<div class="chapter-insignia"><img alt="Brasão da Família Vicent" class="small-crest" src="assets/image-65576fa913d360c1.webp"/></div></div>
+<div class="evidence-head">IDENTIFICAÇÃO E DESCRIÇÃO DO INGREDIENTE</div>
+<div class="evidence-grid"><div class="evidence-card"><h3><span>01</span> Reconhecimento na natureza</h3><div class="evidence-media"><img alt="Reconhecimento na natureza: Fruto de Figo-Murcho" class="hero-photo zoomable" data-caption="Reconhecimento na natureza: Fruto de Figo-Murcho" decoding="sync" loading="eager" src="assets/image-8d2c59b230f4c347.webp" tabindex="0"/></div></div>
+<div class="evidence-card"><h3><span>02</span> Reconhecimento na mochila</h3><div class="evidence-media"><img alt="Descrição original do inventário: Fruto de Figo-Murcho" class="inventory-photo zoomable" data-caption="Descrição original do inventário: Fruto de Figo-Murcho" decoding="sync" loading="eager" src="assets/image-a88180ba73a64879.webp" tabindex="0"/></div></div></div>
+<div class="description-recipe"><div class="description-block"><div class="thin-heading">DESCRIÇÃO REGISTRADA</div><p>Fruto de Figo-Murcho, em uma bolsa protetora de ingredientes.</p><div class="source-note">Reconhecimento, inventário e mapa enviados no registro nº 018.</div></div>
+<div class="recipes-block"><div class="thin-heading">UTILIZAÇÃO EM POÇÕES</div><ul><li><div class="potion-dot">✣</div><div><b>Poção de Gunhilda</b><span>1 Fruto de Figo-Murcho por preparo</span></div></li></ul><small>Receitas transcritas das imagens enviadas. As capturas de poções não foram incorporadas.</small></div></div>
+<div class="to-maps">CONTINUAÇÃO DO CAPÍTULO <span>✧</span> MAPAS E PONTOS DE COLETA <b>↓</b></div>
+</div>
+<div class="chapter-locations"><div class="places-head"><div><div class="eyebrow">CADERNO CARTOGRÁFICO · VI</div><h3>Locais de coleta</h3><p>Mapas originais, com a seta roxa indicando cada ponto identificado.</p></div><div class="map-count">02<span>4 locais</span></div></div>
+<div class="location-grid"><article class="location-card" data-entry="018" id="local-018">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 018</span><span class="qty-badge">1 unidade</span></div>
+<div class="map-container"><img alt="Mapa original do registro 018: Lower Hogsfield — Encosta a sudoeste" class="location-image zoomable" data-caption="Mapa original do registro 018: Lower Hogsfield — Encosta a sudoeste" decoding="sync" loading="eager" src="assets/image-12b60d8ae813e709.webp" tabindex="0"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Lower Hogsfield</h4><div class="location-sub">Encosta a sudoeste</div><p>A sudoeste de Lower Hogsfield, próximo às trilhas na encosta, a oeste do rio.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button aria-pressed="false" class="collect-btn" data-collect="018" type="button">□ Marcar coletado</button></div>
+</div></article><article class="location-card" data-entry="025" id="local-025">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 025</span><span class="qty-badge">1 unidade</span></div>
+<div class="map-container"><img alt="Mapa original do registro 025: Fruto de Figo-Murcho perto de Lower Hogsfield, na trilha da encosta a oeste da vila" class="location-image zoomable" data-caption="Registro 025 — Fruto de Figo-Murcho — Perto de Lower Hogsfield" decoding="sync" loading="eager" src="assets/image-78ee21461559f042.png" tabindex="0"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Lower Hogsfield</h4><div class="location-sub">Trilha junto à encosta oeste</div><p>Perto de Lower Hogsfield, na trilha que passa pela encosta a oeste da vila, conforme a seta roxa no mapa.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button aria-pressed="false" class="collect-btn" data-collect="025" type="button">□ Marcar coletado</button></div>
+</div></article><article class="location-card" data-entry="031" id="local-031">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 031</span><span class="qty-badge">1 unidade</span></div>
+<div class="map-container"><img alt="Mapa original do registro 031: Fruto de Figo-Murcho perto de Keenbridge" class="location-image zoomable" data-caption="Mapa original · Fruto de Figo-Murcho · Perto de Keenbridge" decoding="sync" loading="eager" src="assets/image-0bb2ca6cccc15374.png"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Perto de Keenbridge</h4><div class="location-sub">Trilhas centrais ao sul do caminho principal</div><p>Mais um ponto de Fruto de Figo-Murcho perto de Keenbridge, nas trilhas centrais ao sul do caminho principal. A seta roxa marca a referência no mapa.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button aria-pressed="false" class="collect-btn" data-collect="031" type="button">□ Marcar coletado</button></div>
+</div></article><article class="location-card" data-entry="038" id="local-038">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 038</span><span class="qty-badge">Local confirmado</span></div>
+<div class="map-container"><img alt="Mapa original do registro 038: Fruto de Figo-Murcho perto de Lower Hogsfield" class="location-image zoomable" data-caption="Mapa original · Fruto de Figo-Murcho · Perto de Lower Hogsfield" decoding="sync" loading="eager" src="assets/image-4b692a5b8740b3bc.png"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Perto de Lower Hogsfield</h4><div class="location-sub">Encosta a oeste do vilarejo</div><p>Novo local de Fruto de Figo-Murcho perto de Lower Hogsfield, em uma encosta a oeste do vilarejo. A seta roxa marca a referência no mapa.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button class="collect-btn" data-collect="031" type="button">□ Marcar coletado</button></div>
+</div></article></div>
+<div class="group-ending">✧   Fruto de Figo-Murcho   ✧</div>
+</div>
+</section><section class="book-section" data-search="Moscas Crisopas Félix Felicis Felix Felicis Polissuco Poção de Mana" data-title="Moscas Crisopas" id="crisopas">
+<div class="chapter-cover">
+<div class="chapter-head"><span class="roman">CAPÍTULO VII</span><span class="chapter-type">Insetos &amp; ingredientes de poções</span></div>
+<div class="chapter-rule">✦</div>
+<div class="chapter-intro"><div class="chapter-title"><div class="eyebrow">ARQUIVO DE INGREDIENTES · FAMÍLIA VICENT</div><h2>Moscas Crisopas</h2>
+<p>Ingrediente utilizado em diferentes preparações mágicas</p><div class="chapter-stats"><span>◆ Quantidade não cadastrada</span><span>⌖ Nenhum local cadastrado</span></div></div>
+<div class="chapter-insignia"><img alt="Brasão da Família Vicent" class="small-crest" src="assets/image-65576fa913d360c1.webp"/></div>
+</div>
+<div class="evidence-head">IDENTIFICAÇÃO E DESCRIÇÃO DO INGREDIENTE</div>
+<div class="evidence-grid"><div class="evidence-card"><h3><span>01</span> Reconhecimento na natureza</h3><div class="evidence-media"><div aria-label="01 / Moscas Crisopas no ambiente" class="upload-slot pending-image" data-upload-slot="crisopas-natureza" role="group">
+<div class="pending-symbol">✧</div><span>01 / Moscas Crisopas no ambiente</span><strong>IMAGEM A INCORPORAR</strong>
+<small>Nenhuma imagem de reconhecimento na natureza cadastrada.</small>
+<label class="upload-label">+ Adicionar imagem <input accept="image/png,image/jpeg,image/webp" aria-label="Importar: 01 / Moscas Crisopas no ambiente" class="upload-file" type="file"/></label>
+</div></div></div>
+<div class="evidence-card"><h3><span>02</span> Reconhecimento na mochila</h3><div class="evidence-media"><img alt="Descrição do inventário: Moscas Crisopas" class="hero-photo zoomable" data-caption="Descrição do inventário: Moscas Crisopas" decoding="sync" loading="eager" src="assets/image-dabd74b82bb99b59.png"/></div></div></div>
+<div class="description-recipe"><div class="description-block"><div class="thin-heading">DESCRIÇÃO REGISTRADA</div>
+<p>Ingrediente usado em diferentes preparações mágicas. A imagem de descrição do inventário já foi incorporada; a imagem de reconhecimento na natureza ainda não foi enviada.</p>
+<div class="source-note">A descrição de Moscas Crisopas já foi incorporada. O reconhecimento na natureza e eventuais pontos de coleta continuam pendentes.</div></div>
+<div class="recipes-block"><div class="thin-heading">UTILIZAÇÃO EM POÇÕES</div><ul>
+<li><div class="potion-dot">✣</div><div><b>Felix Felicis</b><span>2 Moscas Crisopas por preparo</span></div></li>
+<li><div class="potion-dot">✣</div><div><b>Poção Polissuco</b><span>2 Moscas Crisopas por preparo</span></div></li>
+<li><div class="potion-dot">✣</div><div><b>Poção de Mana</b><span>1 Mosca Crisopa por preparo</span></div></li>
+</ul><small>Receitas transcritas do material enviado, sem reproduzir as imagens das poções.</small></div></div>
+<div class="to-maps">CADERNO CARTOGRÁFICO <span>✧</span> AGUARDANDO LOCAL DE COLETA</div>
+</div>
+<div class="chapter-locations no-map-section"><div class="places-head"><div><div class="eyebrow">CADERNO CARTOGRÁFICO · VII</div><h3>Locais de coleta</h3><p>Os mapas serão adicionados quando um ponto de Moscas Crisopas for enviado.</p></div><div class="map-count">00<span>REFERÊNCIAS</span></div></div>
+<div class="no-map-pending"><div class="pending-symbol">✧</div><h4>Localização pendente</h4><p>Não foi enviado um mapa de coleta das Moscas Crisopas. Esta seção será preenchida quando houver um local identificado.</p></div>
+<div class="group-ending">✧   Moscas Crisopas   ✧</div></div>
+</section><section class="book-section" data-search="Ovos de Ashwinder Ashwinder ovos ninhos Poção do Desaprendizado Poção Edurus" data-title="Ovos de Ashwinder" id="ovos-ashwinder">
+<div class="chapter-cover">
+<div class="chapter-head"><span class="roman">CAPÍTULO VIII</span><span class="chapter-type">Ovos &amp; ingredientes de poções</span></div>
+<div class="chapter-rule">✦</div>
+<div class="chapter-intro"><div class="chapter-title"><div class="eyebrow">ARQUIVO DE INGREDIENTES · FAMÍLIA VICENT</div><h2>Ovos de Ashwinder</h2>
+<p>Ovos encontrados em ninhos no ambiente natural</p><div class="chapter-stats"><span>◆ 11 no inventário mostrado</span><span>⌖ Localização ainda não cadastrada</span></div></div>
+<div class="chapter-insignia"><img alt="Brasão da Família Vicent" class="small-crest" src="assets/image-65576fa913d360c1.webp"/></div>
+</div>
+<div class="evidence-head">IDENTIFICAÇÃO E DESCRIÇÃO DO INGREDIENTE</div>
+<div class="evidence-grid"><div class="evidence-card"><h3><span>01</span> Reconhecimento na natureza</h3><div class="evidence-media"><img alt="Ovos de Ashwinder na natureza: ninhos no terreno" class="hero-photo zoomable" data-caption="Ovos de Ashwinder na natureza: ninhos no terreno" decoding="sync" loading="eager" src="assets/image-351fd4177f58a204.png" tabindex="0"/></div></div>
+<div class="evidence-card"><h3><span>02</span> Reconhecimento na mochila</h3><div class="evidence-media"><img alt="Descrição do inventário: Ovos de Ashwinder, quantidade 11, peso 1,1 kg" class="hero-photo zoomable" data-caption="Descrição do inventário: Ovos de Ashwinder, quantidade 11, peso 1,1 kg" decoding="sync" loading="eager" src="assets/image-9cf963121c925530.png" tabindex="0"/></div></div></div>
+<div class="description-recipe"><div class="description-block"><div class="thin-heading">DESCRIÇÃO REGISTRADA</div>
+<p>Ovos de Ashwinder, em uma bolsa protetora de ingredientes. A reconhecimento na mochila mostra 11 unidades e peso de 1,1 kg.</p>
+<div class="source-note">Reconhecimento na natureza e descrição do inventário enviados pelo usuário. Ainda não há mapa de localização para este ingrediente.</div></div>
+<div class="recipes-block"><div class="thin-heading">UTILIZAÇÃO EM POÇÕES</div><ul><li><div class="potion-dot">✣</div><div><b>Poção do Desaprendizado</b><span>2 Ovos de Ashwinder por preparo</span></div></li><li><div class="potion-dot">✣</div><div><b>Poção Edurus</b><span>1 Ovo de Ashwinder por preparo</span></div></li></ul><small>Receitas identificadas nas imagens enviadas; capturas das receitas não são reproduzidas neste atlas.</small></div></div>
+<div class="to-maps">CADERNO CARTOGRÁFICO · AGUARDANDO MAPA DE LOCALIZAÇÃO</div>
+</div>
+<div class="chapter-locations no-map-section"><div class="places-head"><div><div class="eyebrow">CADERNO CARTOGRÁFICO · VIII</div><h3>Locais de coleta</h3><p>A localização dos ninhos será adicionada quando um mapa for enviado.</p></div><div class="map-count">00<span>REFERÊNCIAS</span></div></div>
+<div class="no-map-pending"><div class="pending-symbol">✧</div><h4>Localização pendente</h4><p>As imagens de reconhecimento e descrição já estão cadastradas. Falta somente um mapa com a posição do ponto de coleta dos Ovos de Ashwinder.</p></div>
+<div class="group-ending">✧   Ovos de Ashwinder   ✧</div></div>
+</section>
+<section class="book-section" data-search="Chapéus de Cogumelo Saltitante cogumelo saltitante Poção da Invisibilidade" data-title="Chapéus de Cogumelo Saltitante" id="cogumelo-saltitante">
+<div class="chapter-cover">
+<div class="chapter-head"><span class="roman">CAPÍTULO IX</span><span class="chapter-type">Cogumelos &amp; ingredientes raros</span></div>
+<div class="chapter-rule">✦</div>
+<div class="chapter-intro">
+<div class="chapter-title">
+<div class="eyebrow">ARQUIVO DE INGREDIENTES · FAMÍLIA VICENT</div>
+<h2>Chapéus de Cogumelo Saltitante</h2>
+<p>Cogumelos de topo vermelho utilizados em preparos de furtividade.</p>
+<div class="chapter-stats">
+<span>◆ descrição e reconhecimento cadastrados</span>
+<span>⌖ Localização ainda não cadastrada</span>
+</div>
+</div>
+<div class="chapter-insignia"><img alt="Brasão da Família Vicent" class="small-crest" src="assets/image-65576fa913d360c1.webp"/></div>
+</div>
+<div class="chapter-blurb">
+<div class="description-block">
+<h3>Observações do ingrediente</h3>
+<p>Chapéus de Cogumelo Saltitante em bolsa protetora de ingredientes. Ingrediente utilizado na Poção da Invisibilidade.</p>
+<div class="poction-tags"><span>Poção da Invisibilidade</span></div>
+<div class="source-note">As imagens de reconhecimento na natureza e de descrição do inventário já foram incorporadas. Falta apenas o mapa de localização.</div>
+</div>
+<div class="evidence-head">IDENTIFICAÇÃO E DESCRIÇÃO DO INGREDIENTE</div>
+<div class="evidence-grid">
+<div class="evidence-card">
+<h3><span>01</span> Reconhecimento na natureza</h3>
+<div class="evidence-media"><img alt="Reconhecimento na natureza: Chapéus de Cogumelo Saltitante" class="hero-photo zoomable" data-caption="Reconhecimento na natureza: Chapéus de Cogumelo Saltitante" decoding="sync" loading="eager" src="assets/image-2fb13b86ed410962.png"/></div>
+</div>
+<div class="evidence-card">
+<h3><span>02</span> Reconhecimento na mochila</h3>
+<div class="evidence-media"><img alt="Descrição do inventário: Chapéus de Cogumelo Saltitante" class="inventory-photo zoomable" data-caption="Descrição do inventário: Chapéus de Cogumelo Saltitante" decoding="sync" loading="eager" src="assets/image-c8d2d1cdf289ba5c.png"/></div>
+</div>
+</div>
+</div>
+</div>
+<div class="chapter-locations no-map-section">
+<div class="places-head">
+<div>
+<div class="eyebrow">CADERNO CARTOGRÁFICO · IX</div>
+<h3>Locais de coleta</h3>
+<p>A localização será adicionada quando um mapa for enviado.</p>
+</div>
+<div class="map-count">00<span>REFERÊNCIAS</span></div>
+</div>
+<div class="no-map-pending">
+<div class="pending-symbol">✧</div>
+<h4>Localização pendente</h4>
+<p>As imagens de reconhecimento e descrição já estão cadastradas. Falta somente um mapa com a posição do ponto de coleta dos Chapéus de Cogumelo Saltitante.</p>
+</div>
+<div class="group-ending">✧ Chapéus de Cogumelo Saltitante ✧</div>
+</div>
+</section>
+<section class="book-section" data-search="Madeira Antiga madeira madeira antiga Pitt-Upon-Ford Pitt Upon Ford floresta encosta" data-title="Madeira Antiga" id="madeira-antiga">
+<div class="chapter-cover">
+<div class="chapter-head"><span class="roman">CAPÍTULO X</span><span class="chapter-type">Madeiras &amp; materiais naturais</span></div>
+<div class="chapter-rule">✦</div>
+<div class="chapter-intro"><div class="chapter-title"><div class="eyebrow">ARQUIVO DE INGREDIENTES · FAMÍLIA VICENT</div><h2>Madeira Antiga</h2><p>Referência visual de árvores e vegetação de folhas amareladas</p><div class="chapter-stats"><span>◆ Quantidade não informada</span><span>⌖ 1 referência de localização</span></div></div>
+<div class="chapter-insignia"><img alt="Brasão da Família Vicent" class="small-crest" src="assets/image-65576fa913d360c1.webp"/></div></div>
+<div class="evidence-head">IDENTIFICAÇÃO E DESCRIÇÃO DO INGREDIENTE</div>
+<div class="evidence-grid"><div class="evidence-card"><h3><span>01</span> Reconhecimento na natureza</h3><div class="evidence-media"><img alt="Madeira Antiga: reconhecimento na natureza, árvores amarelo-douradas próximo a Pitt-Upon-Ford" class="hero-photo zoomable" data-caption="Madeira Antiga · Reconhecimento na natureza (imagem original)" decoding="sync" loading="eager" src="assets/image-ad6ebc1f24e7113f.webp" tabindex="0"/></div></div>
+<div class="evidence-card"><h3><span>02</span> Reconhecimento na mochila</h3><div class="evidence-media"><img alt="Descrição do inventário: Madeira" class="inventory-photo zoomable" data-caption="Madeira · Descrição original do inventário" decoding="sync" loading="eager" src="assets/image-ced69fbf47ee2ed1.png"/></div></div></div>
+<div class="description-recipe"><div class="description-block"><div class="thin-heading">DESCRIÇÃO REGISTRADA</div><p>Uma tora de madeira curada tirada de uma pilha de lenha; combustível para o fogo do ferreiro e madeira para cabos de ferramentas e vassouras.</p><div class="source-note">Reconhecimento na natureza, descrição original do inventário e mapa de localização do registro nº 020 incorporados.</div></div>
+<div class="recipes-block"><div class="thin-heading">UTILIZAÇÃO / FINALIDADE</div><p>Não informada nas imagens enviadas. Aguardando referência do inventário ou instruções de utilização.</p><small>Nenhuma receita foi associada a este material sem confirmação no acervo.</small></div></div>
+<div class="to-maps">CONTINUAÇÃO DO CAPÍTULO <span>✧</span> MAPAS E PONTOS DE COLETA <b>↓</b></div>
+</div>
+<div class="chapter-locations"><div class="places-head"><div><div class="eyebrow">CADERNO CARTOGRÁFICO · X</div><h3>Locais de coleta</h3><p>Mapas originais, com a seta roxa indicando cada ponto identificado.</p></div><div class="map-count">01<span>REFERÊNCIA</span></div></div>
+<div class="location-grid"><article class="location-card" data-entry="020" id="local-020">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 020</span><span class="qty-badge">Quantidade não informada</span></div>
+<div class="map-container"><img alt="Mapa original do registro 020: Madeira Antiga perto de Pitt-Upon-Ford, na margem do rio a sudeste do vilarejo" class="location-image zoomable" data-caption="Mapa original · Madeira Antiga · Perto de Pitt-Upon-Ford" decoding="sync" loading="eager" src="assets/image-648afc084d09f83b.png"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Pitt-Upon-Ford</h4><div class="location-sub">Margem do rio a sudeste do vilarejo</div><p>Perto de Pitt-Upon-Ford, na margem do rio a sudeste da vila, junto às trilhas próximas ao curso d’água. A seta roxa marca a referência no mapa.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button aria-pressed="false" class="collect-btn" data-collect="020" type="button">□ Marcar coletado</button></div>
+</div></article></div>
+<div class="group-ending">✧  Madeira Antiga  ✧</div>
+</div>
+</section><section class="book-section" data-search="Malva-Doce Malva doce Poção de Gunhilda reconhecimento na natureza descrição inventário erva perfumada vestígios mágicos" data-title="Malva-Doce" id="malva-doce">
+<div class="chapter-cover">
+<div class="chapter-head"><span class="roman">CAPÍTULO XI</span><span class="chapter-type">Ervas &amp; ingredientes de poções</span></div>
+<div class="chapter-rule">✦</div>
+<div class="chapter-intro"><div class="chapter-title"><div class="eyebrow">ARQUIVO DE INGREDIENTES · FAMÍLIA VICENT</div><h2>Malva-Doce</h2>
+<p>Erva perfumada usada para revelar antigos vestígios mágicos</p><div class="chapter-stats"><span>◆ Quantidade não informada</span><span>⌖ 6 referências de localização</span></div></div>
+<div class="chapter-insignia"><img alt="Brasão da Família Vicent" class="small-crest" src="assets/image-65576fa913d360c1.webp"/></div>
+</div>
+<div class="evidence-head">IDENTIFICAÇÃO E DESCRIÇÃO DO INGREDIENTE</div>
+<div class="evidence-grid"><div class="evidence-card"><h3><span>01</span>Reconhecimento na natureza</h3><div class="evidence-media"><div class="malva-recognition-gallery"><figure><img alt="Reconhecimento na natureza: Malva-Doce em terreno gramado, junto às rochas" class="hero-photo zoomable" data-caption="Malva-Doce na natureza — foto original" decoding="sync" loading="eager" src="assets/image-81abd6f49dac9319.png"/><figcaption>Na natureza · imagem atual</figcaption></figure></div></div></div>
+<div class="evidence-card"><h3><span>02</span>Reconhecimento na mochila</h3><div class="evidence-media"><img alt="Descrição do inventário: Malva-Doce" class="hero-photo zoomable" data-caption="Descrição do inventário: Malva-Doce" decoding="sync" loading="eager" src="assets/image-83d4eb910530004e.png"/></div></div></div>
+<div class="description-recipe"><div class="description-block"><div class="thin-heading">DESCRIÇÃO REGISTRADA</div>
+<p>Uma erva perfumada usada para revelar antigos vestígios mágicos.</p>
+<div class="source-note">Reconhecimento na natureza, descrição do inventário e seis pontos de coleta incorporados.</div></div>
+<div class="recipes-block"><div class="thin-heading">UTILIZAÇÃO CONHECIDA</div><ul><li>Poção de Gunhilda — 2 unidades de Malva-Doce por preparo.</li></ul><small>Referência de uso obtida a partir das imagens de poções enviadas pelo usuário.</small></div></div>
+<div class="to-maps">CADERNO CARTOGRÁFICO<span>▼ 5 locais de coleta cadastrados</span></div>
+</div>
+<div class="chapter-locations"><div class="places-head"><div><div class="eyebrow">MAPAS E PONTOS DE COLETA</div><h3>Registros de localização</h3><p>Mapa geral e pontos ampliados, com setas roxas indicando as posições registradas.</p></div><div class="map-count">05<span>6 locais</span></div></div><figure class="malva-overview"><div class="malva-overview-info"><h4>Mapa geral · Região de Brocburrow</h4><p>Visão ampla do ponto nº 036. Os outros mapas abaixo mostram os pontos individualmente, sem repetição de contagem.</p></div><img alt="Mapa geral de Brocburrow com referência do ponto nº 036 de Malva-Doce" class="zoomable" data-caption="Malva-Doce · Brocburrow · vista geral do local nº 036" decoding="sync" loading="eager" src="assets/image-c40841e4493d6fd2.png"/></figure>
+<div class="location-grid"><article class="location-card" data-entry="032" id="local-032">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 032</span><span class="qty-badge">Quantidade não informada</span></div>
+<div class="map-container"><img alt="Mapa original do registro 032: Malva-Doce perto de Brocburrow" class="location-image zoomable" data-caption="Mapa original · Malva-Doce · Perto de Brocburrow" decoding="sync" loading="eager" src="assets/image-05e3c9eb4922a715.png"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Perto de Brocburrow</h4><div class="location-sub">Campo aberto a noroeste do vilarejo</div><p>Primeiro ponto de Malva-Doce cadastrado: perto de Brocburrow, em campo aberto a noroeste do vilarejo, abaixo da encosta rochosa. A seta roxa marca a referência no mapa.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button aria-pressed="false" class="collect-btn" data-collect="032" type="button">□ Marcar coletado</button></div>
+</div></article><article class="location-card" data-entry="033" id="local-033">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 033</span><span class="qty-badge">Quantidade não informada</span></div>
+<div class="map-container"><img alt="Mapa ampliado do registro 033, Malva-Doce perto de Brocburrow" class="location-image zoomable" data-caption="Malva-Doce · Perto de Brocburrow · Ponto nº 033" decoding="sync" loading="eager" src="assets/image-24feab3789dfccca.png"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Perto de Brocburrow</h4><div class="location-sub">Próximo à bifurcação leste</div><p>A leste de Brocburrow, na bifurcação das trilhas junto à encosta. A seta roxa mostra o ponto de coleta.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button aria-pressed="false" class="collect-btn" data-collect="033" type="button">□ Marcar coletado</button></div>
+</div></article><article class="location-card" data-entry="034" id="local-034">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 034</span><span class="qty-badge">Quantidade não informada</span></div>
+<div class="map-container"><img alt="Mapa ampliado do registro 034, Malva-Doce perto de Brocburrow" class="location-image zoomable" data-caption="Malva-Doce · Perto de Brocburrow · Ponto nº 034" decoding="sync" loading="eager" src="assets/image-603bd1dc16e5d892.png"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Perto de Brocburrow</h4><div class="location-sub">Próximo à margem sudoeste do lago</div><p>Ao norte de Brocburrow, próximo à margem sudoeste do pequeno lago, entre as trilhas. A seta roxa marca o local.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button aria-pressed="false" class="collect-btn" data-collect="034" type="button">□ Marcar coletado</button></div>
+</div></article><article class="location-card" data-entry="035" id="local-035">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 035</span><span class="qty-badge">Quantidade não informada</span></div>
+<div class="map-container"><img alt="Mapa ampliado do registro 035, Malva-Doce perto de Brocburrow" class="location-image zoomable" data-caption="Malva-Doce · Perto de Brocburrow · Ponto nº 035" decoding="sync" loading="eager" src="assets/image-d52eeda2087cc8b1.png"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Perto de Brocburrow</h4><div class="location-sub">Trilha a nordeste do lago</div><p>A nordeste do pequeno lago, junto à trilha que contorna a encosta. A seta roxa indica o local.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button aria-pressed="false" class="collect-btn" data-collect="035" type="button">□ Marcar coletado</button></div>
+</div></article><article class="location-card" data-entry="036" id="local-036">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 036</span><span class="qty-badge">Quantidade não informada</span></div>
+<div class="map-container"><img alt="Mapa ampliado do registro 036, Malva-Doce perto de Brocburrow" class="location-image zoomable" data-caption="Malva-Doce · Perto de Brocburrow · Ponto nº 036" decoding="sync" loading="eager" src="assets/image-789a9611b9115404.png"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Perto de Brocburrow</h4><div class="location-sub">Trilha a leste do lago</div><p>A leste do pequeno lago de Brocburrow, na curva da trilha. A seta roxa marca o ponto, também mostrado no mapa geral acima.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button aria-pressed="false" class="collect-btn" data-collect="036" type="button">□ Marcar coletado</button></div>
+</div></article><article class="location-card" data-entry="036" id="local-037">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 036</span><span class="qty-badge">Quantidade não informada</span></div>
+<div class="map-container"><img alt="Mapa original do registro 037: Malva-Doce perto de Brocburrow, próximo ao lado oeste do lago" class="location-image zoomable" data-caption="Mapa original · Malva-Doce · Perto de Brocburrow" decoding="sync" loading="eager" src="assets/image-4600342c58f3055f.png"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Perto de Brocburrow</h4><div class="location-sub">Próximo ao lado oeste do lago</div><p>Novo ponto de Malva-Doce perto de Brocburrow, próximo ao lado oeste do lago e ao acesso do vilarejo. A seta roxa marca a referência no mapa.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button class="collect-btn" data-collect="036" type="button">□ Marcar coletado</button></div>
+</div></article></div>
+<div class="group-ending">✧   Moscas Crisopas   ✧</div></div>
+</section><section class="book-section" data-search="Arruda Keenbridge sul de Keenbridge região pantanosa Erva silvestre contra venenos Essência de Murtisco" data-title="Arruda" id="arruda">
+<div class="chapter-cover">
+<div class="chapter-head"><span class="roman">CAPÍTULO XII</span><span class="chapter-type">Ervas &amp; ingredientes de poções</span></div>
+<div class="chapter-rule">✦</div>
+<div class="chapter-intro"><div class="chapter-title"><div class="eyebrow">ARQUIVO DE INGREDIENTES · FAMÍLIA VICENT</div><h2>Arruda</h2><p>Erva silvestre amarga utilizada contra venenos</p><div class="chapter-stats"><span>◆ Quantidade não informada</span><span>⌖ 4 referências de localização</span></div></div>
+<div class="chapter-insignia"><img alt="Brasão da Família Vicent" class="small-crest" src="assets/image-65576fa913d360c1.webp"/></div></div>
+<div class="evidence-head">IDENTIFICAÇÃO E DESCRIÇÃO DO INGREDIENTE</div>
+<div class="evidence-grid"><div class="evidence-card"><h3><span>01</span> Reconhecimento na natureza</h3><div class="evidence-media"><img alt="Arruda — reconhecimento na natureza (imagem original enviada)" class="hero-photo zoomable" data-caption="Arruda — reconhecimento na natureza (imagem original enviada)" decoding="sync" loading="eager" src="assets/image-9059a102d58ac1cf.webp" tabindex="0"/></div></div>
+<div class="evidence-card"><h3><span>02</span> Reconhecimento na mochila</h3><div class="evidence-media"><img alt="Arruda — descrição original do inventário (imagem enviada)" class="inventory-photo zoomable" data-caption="Arruda — descrição original do inventário (imagem enviada)" decoding="sync" loading="eager" src="assets/image-dd9e93a9026b5c8c.webp" tabindex="0"/></div></div></div>
+<div class="description-recipe"><div class="description-block"><div class="thin-heading">DESCRIÇÃO REGISTRADA</div><p>Um molho de arruda silvestre amarga, há muito usada contra venenos.</p><div class="source-note">Imagens originais de reconhecimento, descrição e localização incorporadas ao atlas.</div></div>
+<div class="recipes-block"><div class="thin-heading">UTILIZAÇÃO EM POÇÕES</div><ul><li><div class="potion-dot">✣</div><div><b>Essência de Murtisco</b><span>2 Arrudas por preparo</span></div></li></ul><small>Utilização identificada na imagem da receita enviada. A imagem da receita não foi incorporada.</small></div></div>
+<div class="to-maps">CONTINUAÇÃO DO CAPÍTULO <span>✧</span> MAPAS E PONTOS DE COLETA <b>↓</b></div>
+</div>
+<div class="chapter-locations"><div class="places-head"><div><div class="eyebrow">CADERNO CARTOGRÁFICO · XII</div><h3>Locais de coleta</h3><p>Mapas originais, com a seta roxa indicando cada ponto identificado.</p></div><div class="map-count">03<span>4 locais</span></div></div>
+<div class="location-grid"><article class="location-card" data-entry="026" id="local-026">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 026</span><span class="qty-badge">Quantidade não informada</span></div>
+<div class="map-container"><img alt="Mapa original de Arruda perto de Keenbridge, ao sul da vila, a leste do rio — seta roxa" class="location-image zoomable" data-caption="Arruda — Perto de Keenbridge · Sul da vila, na margem leste do rio" decoding="sync" loading="eager" src="assets/image-4ec24805dd193b7f.webp" tabindex="0"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Perto de Keenbridge</h4><div class="location-sub">Ao sul do vilarejo, a leste do rio</div><p>Ao sul de Keenbridge, a leste do rio, nas trilhas próximas à região pantanosa. A seta roxa indica o ponto registrado no mapa.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button aria-pressed="false" class="collect-btn" data-collect="026" type="button">□ Marcar coletado</button></div>
+</div></article><article class="location-card" data-entry="027" id="local-027">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 027</span><span class="qty-badge">Quantidade não informada</span></div>
+<div class="map-container"><img alt="Arruda — Perto de Keenbridge · margem leste do rio, junto às ilhotas — mapa original enviado" class="location-image zoomable" data-caption="Arruda — Perto de Keenbridge · margem leste do rio, junto às ilhotas" decoding="sync" loading="eager" src="assets/image-bae8a9424181b4de.webp" tabindex="0"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Perto de Keenbridge</h4><div class="location-sub">Próximo às pequenas ilhas no rio</div><p>A leste do rio, próximo às ilhotas e às trilhas na região pantanosa ao sul de Keenbridge. A seta roxa indica o ponto de referência.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button aria-pressed="false" class="collect-btn" data-collect="027" type="button">□ Marcar coletado</button></div>
+</div></article><article class="location-card" data-entry="028" id="local-028">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 028</span><span class="qty-badge">Quantidade não informada</span></div>
+<div class="map-container"><img alt="Arruda — Perto de Keenbridge · trilha a leste do rio — mapa original enviado" class="location-image zoomable" data-caption="Arruda — Perto de Keenbridge · trilha a leste do rio" decoding="sync" loading="eager" src="assets/image-224dc3b22e2d120d.webp" tabindex="0"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Perto de Keenbridge</h4><div class="location-sub">Trilha a leste do rio</div><p>Perto de Keenbridge, na trilha que acompanha a margem leste do rio, a nordeste do ponto anterior. A seta roxa marca o local.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button aria-pressed="false" class="collect-btn" data-collect="028" type="button">□ Marcar coletado</button></div>
+</div></article><article class="location-card" data-entry="029" id="local-029">
+<div class="location-top"><span class="index-ref">REGISTRO Nº 029</span><span class="qty-badge">Quantidade não informada</span></div>
+<div class="map-container"><img alt="Mapa original do registro 029: Arruda perto de Keenbridge, na região pantanosa ao sul do rio" class="location-image zoomable" data-caption="Mapa original · Arruda · Perto de Keenbridge" decoding="sync" loading="eager" src="assets/image-d1a6f1e3ef4e0da1.png"/><div class="zoom-cue">◈ Ampliar mapa</div></div>
+<div class="location-details"><h4>Perto de Keenbridge</h4><div class="location-sub">Região pantanosa ao sul do rio</div><p>Ponto de Arruda perto de Keenbridge, na região pantanosa ao sul do rio e a sudeste das ilhotas. A seta roxa marca a referência no mapa.</p>
+<div class="record-actions"><span>✦ Seta roxa = referência no mapa</span><button aria-pressed="false" class="collect-btn" data-collect="029" type="button">□ Marcar coletado</button></div>
+</div></article></div>
+<div class="group-ending">✧   Arruda   ✧</div>
+</div>
+</section></main></div>
+<footer class="end-motto"><html><body>Que o conhecimento nos guie. Que a coragem nos proteja.<br/>Arquivo da Família Vicent · Edição 038 · 22 de novembro de 2026</body></html></footer>
+</div><figure class="lightbox" hidden="" id="lightbox"><div class="lightbox-top"><div>AMPLIAÇÃO DO ACERVO</div><button id="lightbox-close" type="button">✕ Fechar</button></div><img alt="" id="lightbox-img"/><figcaption id="lightbox-caption"></figcaption></figure>
+<script>
+(function(){
+ const search=document.getElementById('search');
+ const sections=[...document.querySelectorAll('.book-section')];
+ const noResult=document.getElementById('no-search');
+ function norm(v){return String(v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase()}
+ function updateFilter(){
+   const q=norm(search.value.trim());let visible=0;
+   sections.forEach(sec=>{
+     const hay=norm(sec.dataset.search+' '+sec.textContent);
+     const show=!q||hay.includes(q);
+     sec.hidden=!show;if(show)visible++;
+   });
+   noResult.classList.toggle('show',visible===0);
+   document.querySelectorAll('.nav-link').forEach(a=>{const target=document.querySelector(a.getAttribute('href'));a.hidden=Boolean(target?.hidden)});
+ }
+ search.addEventListener('input',updateFilter);
+ document.getElementById('clear-search').addEventListener('click',()=>{search.value='';updateFilter();search.focus()});
+ let collected={};try{collected=JSON.parse(localStorage.getItem('vicent-collect-v2')||'{}')||{}}catch(e){}
+ const btns=[...document.querySelectorAll('[data-collect]')];
+ function updateBtn(b){const is=Boolean(collected[b.dataset.collect]);b.classList.toggle('found',is);b.setAttribute('aria-pressed',String(is));b.textContent=is?'✓ Coletado':'□ Marcar coletado'}
+ btns.forEach(b=>{updateBtn(b);b.addEventListener('click',()=>{collected[b.dataset.collect]=!collected[b.dataset.collect];document.querySelectorAll(`[data-collect="${b.dataset.collect}"]`).forEach(updateBtn);try{localStorage.setItem('vicent-collect-v2',JSON.stringify(collected))}catch(e){};updateProgress()})});
+ function updateProgress(){const completed=Object.values(collected).filter(Boolean).length;document.getElementById('found-number').textContent=completed}
+ updateProgress();
+ document.getElementById('print-button').addEventListener('click',()=>window.print());
+ const modal=document.getElementById('lightbox'),preview=document.getElementById('lightbox-img'),caption=document.getElementById('lightbox-caption');
+ function openImg(im){preview.src=im.src;preview.alt=im.alt;caption.textContent=im.dataset.caption||im.alt;modal.hidden=false;document.body.style.overflow='hidden';document.getElementById('lightbox-close').focus()}
+ function closeImg(){modal.hidden=true;document.body.style.overflow='';preview.removeAttribute('src')}
+ document.querySelectorAll('.zoomable').forEach(im=>{im.addEventListener('click',()=>openImg(im));im.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openImg(im)}})});
+ document.getElementById('lightbox-close').addEventListener('click',closeImg);
+ modal.addEventListener('click',e=>{if(e.target===modal)closeImg()});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!modal.hidden)closeImg()});
+})();
+</script><script>
+(function(){
+ const imageInputs=[...document.querySelectorAll('.upload-file')];
+ const msg=(t)=>window.alert(t);
+ imageInputs.forEach(input=>{
+  input.addEventListener('change',()=>{
+   const file=input.files && input.files[0];if(!file)return;
+   if(!/^image\/(png|jpeg|webp)$/.test(file.type)){msg('Escolha PNG, JPG ou WEBP.');return}
+   if(file.size>18000000){msg('A imagem é grande demais (limite: 18 MB).');return}
+   const reader=new FileReader(); reader.onload=()=>{
+    const slot=input.closest('.upload-slot'); if(!slot)return;
+    const label=slot.getAttribute('aria-label')||'Imagem do ingrediente';
+    const im=document.createElement('img');im.className='uploaded-photo zoomable';
+    im.src=String(reader.result);im.alt=label;im.dataset.caption=label;im.tabIndex=0;
+    im.addEventListener('click',()=>{const modal=document.getElementById('lightbox');
+      const visual=document.getElementById('lightbox-img');const caption=document.getElementById('lightbox-caption');
+      visual.src=im.src;visual.alt=im.alt;caption.textContent=im.alt;modal.hidden=false;document.body.style.overflow='hidden';});
+    slot.replaceWith(im);
+    if(document.getElementById('save-html'))document.getElementById('save-html').title='Baixar o atlas incluindo a nova imagem';
+   };reader.readAsDataURL(file);
+  });
+ });
+ const save=document.getElementById('save-html');
+ if(save)save.addEventListener('click',()=>{
+  const html=document.documentElement.cloneNode(true);
+  const modal=html.querySelector('#lightbox');if(modal)modal.setAttribute('hidden','');
+  const modalImage=html.querySelector('#lightbox-img');if(modalImage)modalImage.removeAttribute('src');
+  const finder=html.querySelector('#search');if(finder)finder.setAttribute('value','');
+  html.querySelectorAll('.book-section').forEach(e=>e.removeAttribute('hidden'));
+  const source='<!doctype html>\n'+html.outerHTML;
+  const a=document.createElement('a'); const url=URL.createObjectURL(new Blob([source],{type:'text/html;charset=utf-8'}));
+  a.href=url;a.download='Atlas_Vicent_Biblioteca_Com_Imagens.html';document.body.appendChild(a);a.click();a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),1000);
+ });
+})();
+</script></body></html>
